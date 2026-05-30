@@ -7,10 +7,12 @@
     "dev:contentlayer": "contentlayer2 dev",
     "dev:next": "next dev",
     "build": "contentlayer2 build && next build",
+    "build:cloudflare": "contentlayer2 build && npx opennextjs-cloudflare build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.19.11",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",
