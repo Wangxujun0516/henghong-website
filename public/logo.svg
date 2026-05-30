@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="100%" height="100%">
+  <g id="logo-mark">
+    <path d="M210,250 L420,250 L400,260 L225,260 Z" fill="#1A427A" />
+    
+    <circle cx="160" cy="225" r="45" fill="#1A427A" />
+    
+    <path d="M 60,200 
+             C 60,150  110,120 180,120 
+             C 240,120 270,180 310,210 
+             C 340,230 380,230 390,200
+             C 400,170 370,150 360,165
+             C 350,180 340,170 345,155
+             C 350,130 390,120 410,145
+             C 430,170 410,220 360,240
+             C 300,260 260,190 200,160
+             C 140,130 95,160  95,210
+             C 95,230  80,245  70,225 Z" 
+          fill="#3B9C8A" />
+    
+    <g transform="translate(430, 85)">
+      <circle cx="0" cy="0" r="16" fill="none" stroke="#3B9C8A" stroke-width="3" />
+      <text x="-6" y="6" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#3B9C8A">R</text>
+    </g>
+  </g>
+</svg>

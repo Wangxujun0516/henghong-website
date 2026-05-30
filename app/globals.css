@@ -1,0 +1,113 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --primary: #0a2540;
+  --accent: #00aeef;
+  --cta: #ff6200;
+  --neutral: #f8fafc;
+  --dark: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --card: #ffffff;
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-cta: var(--cta);
+  --color-neutral: var(--neutral);
+  --color-dark: var(--dark);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --font-sans: var(--font-inter);
+  --radius-lg: var(--radius);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+.prose-henghong {
+  max-width: none;
+}
+
+.prose-henghong h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.prose-henghong h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.prose-henghong p {
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.prose-henghong ul {
+  margin-bottom: 1rem;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.prose-henghong li {
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+}
+
+.prose-henghong table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.prose-henghong th,
+.prose-henghong td {
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.prose-henghong th {
+  background: var(--neutral);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.prose-henghong strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
