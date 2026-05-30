@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { UmamiAnalytics } from "@/components/analytics/UmamiAnalytics";
 import { FloatingQuoteCTA } from "@/components/layout/FloatingQuoteCTA";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
@@ -37,6 +38,15 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [{ url: "/images/company/Overview.jpg", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: ["/images/company/Overview.jpg"],
+  },
+  alternates: {
+    canonical: siteConfig.url,
+  },
   robots: {
     index: true,
     follow: true,
@@ -61,6 +71,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <FloatingQuoteCTA />
+        <UmamiAnalytics />
       </body>
     </html>
   );

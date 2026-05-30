@@ -77,8 +77,24 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6 text-center text-sm text-white/60">
-          © {year} {siteConfig.name}. All rights reserved.
+        <div className="mt-10 border-t border-white/10 pt-6">
+          <div className="flex flex-col items-center justify-between gap-4 text-sm text-white/60 sm:flex-row">
+            <p>© {year} {siteConfig.name}. All rights reserved.</p>
+            <div className="flex gap-6">
+              <Link
+                href="/privacy-policy"
+                className="hover:text-white"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className="hover:text-white"
+              >
+                Terms of Service
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
