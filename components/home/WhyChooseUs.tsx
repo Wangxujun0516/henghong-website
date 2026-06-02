@@ -2,7 +2,13 @@ import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 
 import { SectionReveal } from "@/components/home/SectionReveal";
-import { whyChooseUs } from "@/lib/site-config";
+
+const whyChooseUs = [
+  "Verified Manufacturing Power: 39,000㎡ modern facility equipped with 7 integrated production lines to ensure stable supply and on-time delivery.",
+  "Strong OEM/ODM Capabilities: Backed by a provincial-level R&D center and 21 professional engineers, we provide tailored custom solutions from design to mass production.",
+  "Strict Quality Assurance: As an Intertek Verified Supplier with 22 years of industry experience, our dedicated QC team guarantees international standard compliance (ISO9001/CE).",
+  "Global Supply Experience: Proven track record of exporting reliable electric jacks and auto-leveling systems to industry leaders across 40+ countries.",
+];
 
 export function WhyChooseUs() {
   return (
@@ -14,7 +20,7 @@ export function WhyChooseUs() {
               Why Choose Henghong
             </p>
             <h2 className="mt-2 text-3xl font-bold text-primary sm:text-4xl">
-              Engineered for Global RV & Industrial Markets
+              Your Trusted Manufacturing Partner for RV & Industrial Equipment
             </h2>
             <ul className="mt-8 space-y-4">
               {whyChooseUs.map((item) => (
