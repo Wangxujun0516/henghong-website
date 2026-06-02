@@ -40,25 +40,25 @@ export const siteConfig = {
 
 export const honors = [
   {
-    image: "/images/honors/Award1.png",
+    image: "/images/honors/iso-9001-certificate.png",
     title: "National Commercial Science & Technology Progress Award — First Prize",
     year: "2022",
     organization: "China General Chamber of Commerce",
   },
   {
-    image: "/images/honors/Award2.png",
+    image: "/images/honors/ce-certification.png",
     title: "National Commercial Science & Technology Progress Award — First Prize (Individual)",
     year: "2022",
     organization: "China General Chamber of Commerce",
   },
   {
-    image: "/images/honors/Award3.png",
+    image: "/images/honors/intertek-verified-supplier.png",
     title: "China Machinery Industry Science & Technology Award — Third Prize",
     year: "2023",
     organization: "China Machinery Industry Federation",
   },
   {
-    image: "/images/honors/Award4.png",
+    image: "/images/honors/bv-certificate.png",
     title: "Zhejiang Science & Technology Progress Award — Third Prize",
     year: "2022",
     organization: "Zhejiang Provincial Government",
@@ -66,10 +66,10 @@ export const honors = [
 ];
 
 export const partners = [
-  { name: "Partner 1", logo: "/images/partners/Partner1.jpg" },
-  { name: "CETC", logo: "/images/partners/Partner2.png" },
-  { name: "CRRC", logo: "/images/partners/Partner3.png" },
-  { name: "CASIC", logo: "/images/partners/Partner4.jpg" },
+  { name: "Partner 1", logo: "/images/partners/partner-thor-industries.jpg" },
+  { name: "CETC", logo: "/images/partners/partner-grand-design.png" },
+  { name: "CRRC", logo: "/images/partners/partner-forest-river.png" },
+  { name: "CASIC", logo: "/images/partners/partner-heartland-rv.jpg" },
 ];
 
 export const whyChooseUs = [

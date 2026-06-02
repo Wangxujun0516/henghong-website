@@ -16,7 +16,7 @@ const applications = [
   {
     title: "Commercial & Special Vehicles",
     description: "Precision support jacks and heavy-duty lifting equipment for industrial trailers and specialty vehicles.",
-    image: "/images/company/use-cases.png",
+    image: "/images/company/rv-leveling-system-use-cases.png",
   },
 ];
 

@@ -67,7 +67,7 @@ export default function AboutPage() {
           <SectionReveal className="mt-16">
             <div className="relative aspect-[21/9] overflow-hidden rounded-lg">
               <Image
-                src="/images/company/products.png"
+                src="/images/company/henghong-product-showcase.png"
                 alt="Henghong product categories"
                 fill
                 className="object-cover"
