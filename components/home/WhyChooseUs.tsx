@@ -1,5 +1,4 @@
 import { CheckCircle2 } from "lucide-react";
-import Image from "next/image";
 
 import { SectionReveal } from "@/components/home/SectionReveal";
 
@@ -33,14 +32,16 @@ export function WhyChooseUs() {
           </SectionReveal>
 
           <SectionReveal delay={0.15}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
-              <Image
-                src="/images/company/oem.avif"
-                alt="Henghong OEM and ODM manufacturing capabilities"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+            <div className="relative overflow-hidden rounded-lg shadow-lg" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                src="https://www.youtube.com/embed/S_UWfbPEHdk"
+                title="Inside Henghong: Leading RV Leveling Systems &amp; Electric Jacks Factory"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full border-none"
+              ></iframe>
             </div>
           </SectionReveal>
         </div>
