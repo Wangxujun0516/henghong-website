@@ -19,7 +19,7 @@ export function WhyChooseUs() {
               Why Choose Henghong
             </p>
             <h2 className="mt-2 text-3xl font-bold text-primary sm:text-4xl">
-              Your Trusted Manufacturing Partner for RV & Industrial Equipment
+              Engineered for Global RV & Industrial Markets
             </h2>
             <ul className="mt-8 space-y-4">
               {whyChooseUs.map((item) => (
