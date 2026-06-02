@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/site-config";
 
 export function HeroSection() {
   return (
@@ -24,10 +23,10 @@ export function HeroSection() {
           Intertek Verified Supplier · Since 2004
         </p>
         <h1 className="max-w-3xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-          Power That Moves With Confidence
+          OEM/ODM RV Leveling Systems & Electric Jacks Manufacturer
         </h1>
         <p className="max-w-2xl text-lg text-white/85 sm:text-xl">
-          {siteConfig.description}
+          Intertek Verified Supplier with 22+ Years of Export Expertise. Serving Global RV Manufacturers and Wholesale Distributors in 40+ Countries.
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button asChild variant="cta" size="lg">
