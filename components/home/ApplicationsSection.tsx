@@ -5,17 +5,17 @@ import { SectionReveal } from "@/components/home/SectionReveal";
 const applications = [
   {
     title: "Towable RVs",
-    description: "Travel trailers and fifth-wheel campers requiring stable auto-leveling.",
+    description: "Custom stabilizing and heavy-duty leveling solutions for travel trailers, toy haulers, and fifth-wheel campers.",
     image: "/images/applications/Folded-Auto-Leveling-System.jpg",
   },
   {
     title: "Motorized RVs",
-    description: "Class A, B, and C motorhomes with heavy-duty leveling demands.",
+    description: "High-capacity electric and hydraulic automatic leveling systems designed for Class A, B, and C motorhomes.",
     image: "/images/applications/Vertical-Auto-Leveling-System.png",
   },
   {
     title: "Commercial & Special Vehicles",
-    description: "Industrial equipment and specialty vehicles needing precision support.",
+    description: "Precision support jacks and heavy-duty lifting equipment for industrial trailers and specialty vehicles.",
     image: "/images/company/use-cases.png",
   },
 ];
