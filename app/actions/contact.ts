@@ -48,7 +48,7 @@ export async function submitContactForm(
 
   const data = validation.data;
   const apiKey = process.env.RESEND_API_KEY;
-  const recipient = process.env.CONTACT_RECIPIENT_EMAIL ?? "streamsbolt@gmail.com";
+  const recipient = process.env.CONTACT_RECIPIENT_EMAIL ?? "wangxujun0516@gmail.com";
 
   if (!apiKey) {
     console.error("RESEND_API_KEY is not configured");
