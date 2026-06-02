@@ -12,6 +12,13 @@ import { siteConfig } from "@/lib/site-config";
 export default function HomePage() {
   const products = getAllProducts();
 
+  const featuredProducts = products
+    .filter((p) => 
+      p.category === "Automatic Leveling Systems" || 
+      p.category === "Electric Jacks"
+    )
+    .slice(0, 8);
+
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -37,7 +44,7 @@ export default function HomePage() {
       <JsonLd data={organizationJsonLd} />
       <HeroSection />
       <TrustBar />
-      <FeaturedProducts products={products} />
+      <FeaturedProducts products={featuredProducts} />
       <WhyChooseUs />
       <ApplicationsSection />
       <PartnersSection />

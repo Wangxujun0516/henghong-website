@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { siteConfig } from "@/lib/site-config";
+
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
@@ -55,7 +57,7 @@ export default function PrivacyPolicyPage() {
             <h2>Data Retention</h2>
             <p>
               We retain your contact information for as long as your inquiry is active or as needed to provide you with services. You may request deletion of your data at any time by contacting us at{" "}
-              <a href="mailto:sales@henghong-equipment.com">sales@henghong-equipment.com</a>.
+              <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>.
             </p>
 
             <h2>Cookies and Tracking</h2>
@@ -78,7 +80,7 @@ export default function PrivacyPolicyPage() {
               <li>Data portability</li>
             </ul>
             <p>To exercise these rights, please contact us at{" "}
-              <a href="mailto:sales@henghong-equipment.com">sales@henghong-equipment.com</a>.
+              <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>.
             </p>
 
             <h2>Third-Party Links</h2>
@@ -96,9 +98,9 @@ export default function PrivacyPolicyPage() {
               If you have any questions about this Privacy Policy or our data practices, please contact us:
             </p>
             <ul>
-              <li>Email: <a href="mailto:sales@henghong-equipment.com">sales@henghong-equipment.com</a></li>
-              <li>Phone: +86 153 8400 6618</li>
-              <li>Address: Hangzhou, Zhejiang Province, China</li>
+              <li>Email: <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a></li>
+              <li>Phone: {siteConfig.contact.phone}</li>
+              <li>Address: {siteConfig.contact.address}</li>
             </ul>
 
             <h2>International Transfers</h2>

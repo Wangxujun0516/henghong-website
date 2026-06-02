@@ -44,9 +44,6 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: ["/images/company/Overview.jpg"],
   },
-  alternates: {
-    canonical: siteConfig.url,
-  },
   robots: {
     index: true,
     follow: true,

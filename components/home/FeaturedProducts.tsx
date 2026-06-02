@@ -25,7 +25,7 @@ export function FeaturedProducts({ products }: { products: Product[] }) {
           </div>
         </SectionReveal>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
           {products.map((product, index) => (
             <SectionReveal key={product.slug} delay={index * 0.08}>
               <ProductCard product={product} />

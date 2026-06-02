@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { siteConfig } from "@/lib/site-config";
+
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
@@ -87,9 +89,9 @@ export default function TermsPage() {
             <h2>Contact Information</h2>
             <p>For questions regarding these Terms of Service, please contact us:</p>
             <ul>
-              <li>Email: <a href="mailto:sales@henghong-equipment.com">sales@henghong-equipment.com</a></li>
-              <li>Phone: +86 153 8400 6618</li>
-              <li>Address: Hangzhou, Zhejiang Province, China</li>
+              <li>Email: <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a></li>
+              <li>Phone: {siteConfig.contact.phone}</li>
+              <li>Address: {siteConfig.contact.address}</li>
             </ul>
           </div>
         </div>
