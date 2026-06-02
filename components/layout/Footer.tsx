@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <h3 className="text-lg font-bold">{siteConfig.shortName}</h3>
+            <h3 className="text-lg font-bold">{siteConfig.name}</h3>
             <p className="mt-3 text-sm text-white/75">
               {siteConfig.description}
             </p>

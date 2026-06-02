@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Henghong Intelligent Equipment",
+  name: "Henghong Intelligent Equipment Co., Ltd.",
   shortName: "Henghong",
   description:
     "Professional automatic leveling systems, electric jacks, and RV intelligent equipment. Intertek Verified Supplier exporting to 40+ countries.",
@@ -8,8 +8,10 @@ export const siteConfig = {
     email: "sales@henghong-equipment.com",
     phone: "+86 153 8400 6618",
     whatsapp: "+86 153 8400 6618",
-    wechat: "15384006618",
-    address: "Hangzhou, Zhejiang Province, China",
+    address:
+      "No. 38, Kenmao Street, Yinong Town, Xiaoshan District, Hangzhou City, Zhejiang Province, China",
+    businessHours: "Monday - Friday, 08:00 - 17:30 (Beijing Time)",
+    responseTime: "We typically reply within 24 hours",
   },
   nav: [
     { label: "Home", href: "/" },
