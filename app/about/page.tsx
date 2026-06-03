@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { CtaSection } from "@/components/home/CtaSection";
-import { Factory, Users, Award, Shield, Cog, FileCheck } from "lucide-react";
+import { Factory, Users, Award, Shield, Cog, FileCheck, BadgeCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us - Intertek Verified RV Equipment Manufacturer",
@@ -48,13 +48,7 @@ export default function AboutPage() {
       <section className="bg-primary py-16 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
-            <Image
-              src="/images/certifications/intertek-verified.svg"
-              alt="Intertek Verified Supplier"
-              className="h-12 w-12 rounded"
-              width={48}
-              height={48}
-            />
+            <BadgeCheck className="h-12 w-12 text-yellow-400" />
             <span className="text-sm font-semibold uppercase tracking-wide">Intertek Verified Supplier</span>
           </div>
           <h1 className="mt-4 text-4xl font-bold sm:text-5xl">
