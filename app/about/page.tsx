@@ -49,7 +49,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
             <Image
-              src="/images/certifications/intertek-verified.png"
+              src="/images/certifications/intertek-verified.webp"
               alt="Intertek Verified Supplier"
               className="h-12 w-12 rounded"
               width={48}
