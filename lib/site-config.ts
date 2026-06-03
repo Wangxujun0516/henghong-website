@@ -3,9 +3,9 @@ export const siteConfig = {
   shortName: "Henghong",
   description:
     "Professional automatic leveling systems, electric jacks, and RV intelligent equipment. Intertek Verified Supplier exporting to 40+ countries.",
-  url: "https://www.henghong-equipment.com",
+  url: "https://www.henghongrv.com",
   contact: {
-    email: "sales@henghong-equipment.com",
+    email: "sales@henghongrv.com",
     phone: "+86 153 8400 6618",
     whatsapp: "+86 153 8400 6618",
     address:
