@@ -35,10 +35,10 @@ const capabilities = [
 ];
 
 const galleryImages = [
-  { src: "/images/company/factory-front.webp", alt: "Factory Front View" },
+  { src: "/images/company/factory-front-view.webp", alt: "Factory Front View" },
   { src: "/images/company/cnc-workshop.webp", alt: "CNC Workshop" },
   { src: "/images/company/robotic-welding.webp", alt: "Robotic Welding Station" },
-  { src: "/images/company/warehouse.webp", alt: "Finished Product Warehouse" },
+  { src: "/images/company/finished-product-warehouse.webp", alt: "Finished Product Warehouse" },
 ];
 
 export default function AboutPage() {
