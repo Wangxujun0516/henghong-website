@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const productImages = [
   "/products/electric-jacks/electric-camper-jack-3500-led-01-main.webp",
-  "/products/electric-jacks/electric-camper-jack-3500-led-01-detail.webp",
+  "/products/electric-jacks/electric-camper-jack-3500-led-02-detail.webp",
 ];
 
 const keyAdvantages = [
