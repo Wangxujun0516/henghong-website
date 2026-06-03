@@ -63,8 +63,8 @@ export default function ScissorJackPage() {
               Products
             </Link>
             <span className="mx-2">/</span>
-            <Link href="/products?category=Stabilizer+Jacks" className="hover:text-accent">
-              Stabilizer Jacks
+            <Link href="/products?category=RV+Accessories" className="hover:text-accent">
+              RV Accessories
             </Link>
             <span className="mx-2">/</span>
             <span className="text-primary">Scissor Jack</span>
@@ -107,7 +107,7 @@ export default function ScissorJackPage() {
             {/* Product Info */}
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-accent">
-                Stabilizer Jacks · Scissor
+                RV Accessories · Scissor
               </p>
               <h1 className="mt-2 text-3xl font-bold text-primary sm:text-4xl">
                 Heavy-Duty RV Scissor Jack / Stabilizer Jack
