@@ -1,61 +1,4 @@
-import BlogCard from "@/components/blog/BlogCard";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "Understanding Electric Jack Load Ratings for RV Stability",
-    excerpt: "Learn how to properly calculate load requirements for your trailer stabilization systems and ensure maximum safety at the campsite.",
-    category: "Engineering Guide",
-    date: "June 4, 2026",
-    image: "/images/blog/electric-jack-engineering.webp",
-    slug: "understanding-electric-jack-load-ratings",
-  },
-  {
-    id: 2,
-    title: "Intertek Factory Audit: What RV Manufacturers Need to Know",
-    excerpt: "A comprehensive guide to Intertek verification requirements and how certification impacts your global supply chain.",
-    category: "Factory News",
-    date: "May 28, 2026",
-    image: "/images/blog/intertek-audit.webp",
-    slug: "intertek-factory-audit-guide",
-  },
-  {
-    id: 3,
-    title: "Advanced Auto-Leveling Systems for Modern Motorhomes",
-    excerpt: "Discover the latest innovations in automatic RV leveling technology and how smart systems improve user experience.",
-    category: "Technology",
-    date: "May 21, 2026",
-    image: "/images/blog/auto-leveling-system.webp",
-    slug: "advanced-auto-leveling-systems",
-  },
-  {
-    id: 4,
-    title: "OEM Customization Process: From Design to Production",
-    excerpt: "A step-by-step guide to our OEM/ODM customization workflow for trailer jacks and leveling systems.",
-    category: "OEM Guide",
-    date: "May 14, 2026",
-    image: "/images/blog/oem-customization.webp",
-    slug: "oem-customization-process",
-  },
-  {
-    id: 5,
-    title: "Corrosion Protection: Extending Jack Lifespan in Coastal Environments",
-    excerpt: "Best practices for protecting your RV equipment from saltwater corrosion and harsh marine conditions.",
-    category: "Maintenance",
-    date: "May 7, 2026",
-    image: "/images/blog/corrosion-protection.webp",
-    slug: "corrosion-protection-guide",
-  },
-  {
-    id: 6,
-    title: "ISO9001 Quality Management: Ensuring Consistent Product Excellence",
-    excerpt: "How our ISO9001 certification guarantees product quality and reliability for every shipment.",
-    category: "Compliance",
-    date: "April 30, 2026",
-    image: "/images/blog/iso9001-quality.webp",
-    slug: "iso9001-quality-management",
-  },
-];
+import { FileText, Clock } from "lucide-react";
 
 export default function BlogPage() {
   return (
@@ -74,13 +17,53 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Blog Grid */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <BlogCard key={post.id} post={post} />
-            ))}
+      {/* Coming Soon Section */}
+      <section className="py-16 md:py-24 bg-neutral">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6">
+              <FileText className="w-10 h-10 text-primary" />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Technical Resources Coming Soon
+            </h2>
+            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+              Our team is preparing comprehensive technical articles, engineering guides, and industry insights for RV manufacturers and parts distributors worldwide.
+            </p>
+            <div className="mt-8 flex items-center justify-center gap-2 text-sm text-gray-500">
+              <Clock className="w-4 h-4" />
+              <span>Expected launch: Q3 2026</span>
+            </div>
+          </div>
+
+          {/* Preview Topics */}
+          <div className="mt-12 bg-white rounded-xl p-8 border border-gray-200">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Upcoming Content Topics</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                "Electric Jack Load Rating Calculations",
+                "OEM/ODM Customization Best Practices",
+                "RV Leveling System Installation Guides",
+                "Intertek Factory Audit Process",
+                "Corrosion Protection for Marine Environments",
+                "ISO9001 Quality Compliance",
+              ].map((topic, index) => (
+                <div key={index} className="flex items-center gap-3 text-gray-700">
+                  <div className="w-2 h-2 bg-primary rounded-full" />
+                  <span>{topic}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-8 text-center">
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors"
+            >
+              Contact Us for Technical Support
+            </a>
           </div>
         </div>
       </section>
