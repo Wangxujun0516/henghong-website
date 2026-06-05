@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
+import { ProductInquiryForm } from "@/components/products/ProductInquiryForm";
 import { CheckCircle2, Lightbulb, Weight, Ruler, Shield } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -301,6 +302,27 @@ export default function HH3500CamperPage() {
                 <span className="text-sm font-medium text-primary">{app}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Product Inquiry Form */}
+      <section className="bg-primary/5 py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-accent">
+              Get Started
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-primary sm:text-4xl">
+              Request a Quote for HH-3500 Camper
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-muted">
+              Fill out the form below and our sales team will contact you within 24 hours with competitive pricing and lead time information.
+            </p>
+          </div>
+
+          <div className="mt-10 rounded-xl border border-border bg-white p-6 sm:p-8">
+            <ProductInquiryForm productName="Model HH-3500 Camper | 3500lbs Electric A-Frame Tongue Jack with LED" />
           </div>
         </div>
       </section>
