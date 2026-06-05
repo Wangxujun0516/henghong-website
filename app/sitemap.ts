@@ -1,27 +1,30 @@
-import type { MetadataRoute } from "next";
+import { MetadataRoute } from "next";
+import { allProducts } from "@/.contentlayer/generated";
 
-import { getAllProducts } from "@/lib/products";
-import { siteConfig } from "@/lib/site-config";
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  const products = getAllProducts();
-  const baseUrl = siteConfig.url;
-
-  const staticPages = ["", "/about", "/products", "/honors", "/contact"].map(
-    (path) => ({
-      url: `${baseUrl}${path}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: path === "" ? 1 : 0.8,
-    }),
-  );
-
-  const productPages = products.map((product) => ({
-    url: `${baseUrl}${product.url}`,
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const products = allProducts.map((product) => ({
+    url: `https://www.henghongrv.com/products/${product._raw.flattenedPath}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
-  return [...staticPages, ...productPages];
+  const pages = [
+    { url: "https://www.henghongrv.com/", priority: 1.0, changeFrequency: "daily" as const },
+    { url: "https://www.henghongrv.com/about", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "https://www.henghongrv.com/products", priority: 0.9, changeFrequency: "weekly" as const },
+    { url: "https://www.henghongrv.com/blog", priority: 0.8, changeFrequency: "weekly" as const },
+    { url: "https://www.henghongrv.com/honors", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "https://www.henghongrv.com/contact", priority: 0.8, changeFrequency: "monthly" as const },
+  ];
+
+  return [
+    ...pages.map((page) => ({
+      url: page.url,
+      lastModified: new Date(),
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+    })),
+    ...products,
+  ];
 }
