@@ -30,10 +30,13 @@ export async function generateMetadata({
   return {
     title: product.title,
     description: product.features?.[0] ?? siteConfig.description,
+    alternates: {
+      canonical: `${siteConfig.url}${product.url}`,
+    },
     openGraph: {
-      title: product.title,
-      description: product.features?.[0],
-      images: product.images?.[0] ? [{ url: product.images[0] }] : undefined,
+      title: `${product.title} | ${siteConfig.shortName}`,
+      description: product.features?.[0] ?? siteConfig.description,
+      images: product.images?.[0] ? [{ url: `${siteConfig.url}${product.images[0]}`, width: 800, height: 600 }] : undefined,
     },
   };
 }
@@ -55,10 +58,22 @@ export default async function ProductDetailPage({ params }: PageProps) {
       "@type": "Brand",
       name: siteConfig.shortName,
     },
-    sku: product.model,
+    manufacturer: {
+      "@type": "Organization",
+      name: siteConfig.name,
+    },
+    productID: product.model ?? product.slug,
     category: product.category,
     image: product.images?.map((img) => `${siteConfig.url}${img}`),
     url: `${siteConfig.url}${product.url}`,
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      priceCurrency: "USD",
+      price: "0",
+      priceValidUntil: "2027-12-31",
+    },
   };
 
   return (

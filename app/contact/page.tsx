@@ -5,9 +5,18 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us - RV Leveling System Manufacturer | Henghong",
   description:
-    "Contact Henghong Intelligent Equipment Co., Ltd. for quotes on RV leveling systems, stabilizer jacks, and OEM/ODM projects. We typically reply within 24 hours.",
+    "Contact Henghong for quotes on RV leveling systems, stabilizer jacks, and OEM/ODM projects. Intertek Verified Supplier with 22+ years of export experience. We reply within 24 hours.",
+  alternates: {
+    canonical: "https://www.henghongrv.com/contact",
+  },
+  openGraph: {
+    title: "Contact Henghong RV Equipment Manufacturer",
+    description:
+      "Get quotes for RV leveling systems and electric jacks. Contact our sales team for OEM/ODM partnerships and technical support.",
+    images: [{ url: "/images/company/Overview.jpg", width: 1200, height: 630 }],
+  },
 };
 
 export default function ContactPage() {

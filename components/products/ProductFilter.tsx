@@ -20,8 +20,20 @@ export function ProductFilter({
     return products.filter((product) => product.category === activeCategory);
   }, [activeCategory, products]);
 
+  // Group products by category for display
+  const groupedProducts = useMemo(() => {
+    if (activeCategory !== "All") return null;
+    
+    const groups: Record<string, Product[]> = {};
+    categories.forEach((cat) => {
+      groups[cat] = products.filter((p) => p.category === cat);
+    });
+    return groups;
+  }, [activeCategory, categories, products]);
+
   return (
     <div>
+      {/* Filter buttons */}
       <div className="flex flex-wrap gap-2">
         {["All", ...categories].map((category) => (
           <button
@@ -33,7 +45,7 @@ export function ProductFilter({
               "rounded-full px-4 py-2 text-sm font-medium transition-colors",
               activeCategory === category
                 ? "bg-primary text-white"
-                : "bg-neutral text-primary hover:bg-accent/10",
+                : "bg-white text-primary hover:bg-accent/10",
             )}
           >
             {category}
@@ -41,11 +53,30 @@ export function ProductFilter({
         ))}
       </div>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((product) => (
-          <ProductCard key={product.slug} product={product} />
-        ))}
-      </div>
+      {/* Grouped display (when "All" is selected) */}
+      {groupedProducts && (
+        <div className="mt-10 space-y-12">
+          {categories.map((category) => (
+            <div key={category}>
+              <h2 className="text-2xl font-bold text-primary">{category}</h2>
+              <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {groupedProducts[category]?.map((product) => (
+                  <ProductCard key={product.slug} product={product} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Filtered display (when a specific category is selected) */}
+      {!groupedProducts && (
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((product) => (
+            <ProductCard key={product.slug} product={product} />
+          ))}
+        </div>
+      )}
 
       {filtered.length === 0 && (
         <p className="mt-10 text-center text-muted">

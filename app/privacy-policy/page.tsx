@@ -3,9 +3,12 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy | Henghong",
   description:
     "Privacy Policy for Henghong Intelligent Equipment - How we collect, use, and protect your information when you contact us or browse our website.",
+  alternates: {
+    canonical: "https://www.henghongrv.com/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {

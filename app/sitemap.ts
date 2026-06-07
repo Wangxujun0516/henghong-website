@@ -13,9 +13,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: "https://www.henghongrv.com/", priority: 1.0, changeFrequency: "daily" as const },
     { url: "https://www.henghongrv.com/about", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "https://www.henghongrv.com/products", priority: 0.9, changeFrequency: "weekly" as const },
-    { url: "https://www.henghongrv.com/blog", priority: 0.8, changeFrequency: "weekly" as const },
+    { url: "https://www.henghongrv.com/technical-resources", priority: 0.7, changeFrequency: "monthly" as const },
     { url: "https://www.henghongrv.com/honors", priority: 0.7, changeFrequency: "monthly" as const },
     { url: "https://www.henghongrv.com/contact", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "https://www.henghongrv.com/privacy-policy", priority: 0.5, changeFrequency: "yearly" as const },
+    { url: "https://www.henghongrv.com/terms-of-service", priority: 0.5, changeFrequency: "yearly" as const },
   ];
 
   return [

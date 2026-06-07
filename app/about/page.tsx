@@ -5,11 +5,44 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { CtaSection } from "@/components/home/CtaSection";
 import { Factory, Users, Award, Shield, Cog, FileCheck, BadgeCheck } from "lucide-react";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "About Us - Intertek Verified RV Equipment Manufacturer",
   description:
     "Henghong RV Equipment: An Intertek-Verified Manufacturer with 39,000㎡ facility, 100+ skilled staff, and ISO9001:2015 certification for global RV OEMs and distributors.",
+  alternates: {
+    canonical: "https://www.henghongrv.com/about",
+  },
+  openGraph: {
+    title: "About Henghong - Intertek Verified RV Equipment Manufacturer",
+    description:
+      "Learn about Henghong's 39,000㎡ manufacturing facility, ISO9001:2015 certification, and 22+ years of experience as an OEM/ODM supplier for global RV manufacturers.",
+    images: [{ url: "/images/company/Overview.jpg", width: 1200, height: 630 }],
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/logo.svg`,
+  description: siteConfig.description,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "No. 38, Kenmao Street, Yinong Town, Xiaoshan District",
+    addressLocality: "Hangzhou",
+    addressRegion: "Zhejiang",
+    addressCountry: "CN",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: siteConfig.contact.phone,
+    contactType: "sales",
+    email: siteConfig.contact.email,
+  },
 };
 
 const factoryStats = [
@@ -44,6 +77,7 @@ const galleryImages = [
 export default function AboutPage() {
   return (
     <div className="bg-white">
+      <JsonLd data={organizationJsonLd} />
       {/* Hero Section */}
       <section className="bg-primary py-16 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

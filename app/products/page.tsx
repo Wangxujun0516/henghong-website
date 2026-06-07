@@ -4,9 +4,18 @@ import { ProductFilter } from "@/components/products/ProductFilter";
 import { getAllProducts, getProductCategories } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Products",
+  title: "RV Leveling Systems & Electric Jacks - OEM Manufacturer | Henghong",
   description:
-    "Browse Henghong automatic leveling systems and electric stabilizer jacks for RVs, trailers, and special vehicles.",
+    "Browse Henghong's premium automatic leveling systems, electric stabilizer jacks, and RV equipment. Intertek Verified OEM/ODM manufacturer serving global RV manufacturers and distributors.",
+  alternates: {
+    canonical: "https://www.henghongrv.com/products",
+  },
+  openGraph: {
+    title: "RV Leveling Systems & Electric Jacks | Henghong",
+    description:
+      "Premium automatic leveling systems and electric stabilizer jacks from Intertek Verified OEM manufacturer. Serving global RV industry since 2004.",
+    images: [{ url: "/images/company/Overview.jpg", width: 1200, height: 630 }],
+  },
 };
 
 export default function ProductsPage() {
