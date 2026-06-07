@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FileText, Download, HelpCircle, BookOpen, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Technical Resources & Industry Guides | Henghong",
+  title: "Technical Resources & Industry Guides",
   description:
     "Access technical specifications, installation guides, and industry insights for RV leveling systems and electric jacks from Henghong.",
   alternates: {

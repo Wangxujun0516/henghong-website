@@ -76,9 +76,41 @@ export default async function ProductDetailPage({ params }: PageProps) {
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: `${siteConfig.url}/products`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.category,
+        item: `${siteConfig.url}/products#${product.category.toLowerCase().replace(/\s+/g, "-")}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: product.model ?? product.title.split(" | ")[0] ?? product.title,
+        item: `${siteConfig.url}${product.url}`,
+      },
+    ],
+  };
+
   return (
     <div className="bg-white">
       <JsonLd data={productJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
 
       <section className="border-b border-border bg-neutral py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

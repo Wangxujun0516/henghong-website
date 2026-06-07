@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ApplicationsSection } from "@/components/home/ApplicationsSection";
 import { CtaSection } from "@/components/home/CtaSection";
 import { FaqSection } from "@/components/home/FaqSection";
@@ -9,6 +10,12 @@ import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getAllProducts } from "@/lib/products";
 import { siteConfig } from "@/lib/site-config";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
 
 export default function HomePage() {
   const products = getAllProducts();

@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Contact Us - RV Leveling System Manufacturer | Henghong",
+  title: "Contact Us - RV Leveling System Manufacturer",
   description:
     "Contact Henghong for quotes on RV leveling systems, stabilizer jacks, and OEM/ODM projects. Intertek Verified Supplier with 22+ years of export experience. We reply within 24 hours.",
   alternates: {

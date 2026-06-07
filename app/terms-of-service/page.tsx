@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Henghong",
+  title: "Terms of Service",
   description:
     "Read Henghong's terms of service for B2B customers, OEMs, and distributors of RV leveling systems and electric jacks.",
   alternates: {

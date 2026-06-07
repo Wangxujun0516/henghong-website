@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Honors & Certifications",
   description:
     "National and provincial science & technology awards recognizing Henghong's innovation in intelligent leveling systems.",
+  alternates: {
+    canonical: "https://www.henghongrv.com/honors",
+  },
 };
 
 export default function HonorsPage() {
