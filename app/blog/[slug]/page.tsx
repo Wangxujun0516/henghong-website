@@ -227,7 +227,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${article.title} | Henghong`,
+    title: article.title,
     description: article.description,
     alternates: {
       canonical: `https://www.henghongrv.com/blog/${slug}`,
