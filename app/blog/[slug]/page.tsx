@@ -107,7 +107,7 @@ const articles = {
 
       ### Step 1: Check Third-Party Verification (Intertek)
 
-      <img src="/images/certifications/intertek-verified.webp" alt="Intertek Verified Supplier certification for RV jack manufacturer China" class="w-full h-auto rounded-lg mb-4" />
+      <img src="/images/company/factory-front-view.webp" alt="Intertek Verified RV jack manufacturer factory in China - 39,000㎡ facility" class="w-full h-auto rounded-lg mb-4" />
       <p class="text-sm text-gray-500 italic mb-6">Intertek verification confirms the manufacturer has passed a rigorous on-site factory audit.</p>
 
       Third-party verification is the fastest way to confirm a manufacturer's legitimacy. Intertek, one of the world's leading inspection and certification organizations, conducts on-site factory audits that verify:
@@ -171,6 +171,52 @@ const articles = {
       - Reliability in meeting delivery deadlines
 
       Ask for trade references or case studies from buyers in your region.
+
+      ### Quick Reference: Reliable Manufacturer vs. Trading Company
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Dimension</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Reliable Manufacturer (e.g., Henghong)</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Trading Company</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Factory</td>
+              <td class="border border-gray-300 px-4 py-3">Own 39,000㎡ facility with 7 production lines</td>
+              <td class="border border-gray-300 px-4 py-3">Office only, no factory floor</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Certifications</td>
+              <td class="border border-gray-300 px-4 py-3">Intertek Verified, ISO9001, CE, FCC, IC</td>
+              <td class="border border-gray-300 px-4 py-3">Cannot provide audit reports</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Equipment</td>
+              <td class="border border-gray-300 px-4 py-3">CNC machining, robotic welding, powder coating lines</td>
+              <td class="border border-gray-300 px-4 py-3">No in-house manufacturing equipment</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Quality Control</td>
+              <td class="border border-gray-300 px-4 py-3">Load testing, salt-spray testing, batch sampling</td>
+              <td class="border border-gray-300 px-4 py-3">No documented QC process</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Customization</td>
+              <td class="border border-gray-300 px-4 py-3">21 R&amp;D engineers supporting OEM/ODM projects</td>
+              <td class="border border-gray-300 px-4 py-3">Resells standard products only</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Lead Time</td>
+              <td class="border border-gray-300 px-4 py-3">15-30 days, contractually committed</td>
+              <td class="border border-gray-300 px-4 py-3">Unpredictable, dependent on actual factory</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       ## Red Flags to Watch Out For
 
