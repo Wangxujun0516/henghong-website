@@ -263,12 +263,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     return content
       // Step 1: Protect existing HTML tags
       .replace(/<\/?[a-z][^>]*>/gi, (match) => `\x00${match}\x01`)
-      // Step 2: Convert markdown headings
-      .replace(/^### (.+)$/gm, "</p><h3 class='text-xl font-bold text-gray-900 mt-8 mb-4'>$1</h3><p>")
-      .replace(/^## (.+)$/gm, "</p><h2 class='text-2xl font-bold text-gray-900 mt-10 mb-4'>$1</h2><p>")
-      // Step 3: Convert lists
-      .replace(/^- (.+)$/gm, "</p><li class='ml-4 text-gray-700'>$1</li><p>")
-      .replace(/^\d+\. (.+)$/gm, "</p><li class='ml-4 text-gray-700'>$1</li><p>")
+      // Step 2: Convert markdown headings (allow leading whitespace)
+      .replace(/^\s*### (.+)$/gm, "</p><h3 class='text-xl font-bold text-gray-900 mt-8 mb-4'>$1</h3><p>")
+      .replace(/^\s*## (.+)$/gm, "</p><h2 class='text-2xl font-bold text-gray-900 mt-10 mb-4'>$1</h2><p>")
+      // Step 3: Convert lists (allow leading whitespace)
+      .replace(/^\s*- (.+)$/gm, "</p><li class='ml-4 text-gray-700'>$1</li><p>")
+      .replace(/^\s*\d+\. (.+)$/gm, "</p><li class='ml-4 text-gray-700'>$1</li><p>")
       // Step 4: Convert bold
       .replace(/\*\*(.+?)\*\*/g, "<strong class='font-semibold'>$1</strong>")
       // Step 5: Convert double newlines to paragraph breaks
