@@ -261,23 +261,25 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   // Render markdown content with HTML protection
   const renderContent = (content: string) => {
     return content
-      // Step 1: Protect existing HTML tags
-      .replace(/<\/?[a-z][^>]*>/gi, (match) => `\x00${match}\x01`)
+      // Step 1: Trim leading/trailing whitespace
+      .trim()
       // Step 2: Convert markdown headings (allow leading whitespace)
-      .replace(/^\s*### (.+)$/gm, "</p><h3 class='text-xl font-bold text-gray-900 mt-8 mb-4'>$1</h3><p>")
-      .replace(/^\s*## (.+)$/gm, "</p><h2 class='text-2xl font-bold text-gray-900 mt-10 mb-4'>$1</h2><p>")
-      // Step 3: Convert lists (allow leading whitespace)
-      .replace(/^\s*- (.+)$/gm, "</p><li class='ml-4 text-gray-700'>$1</li><p>")
-      .replace(/^\s*\d+\. (.+)$/gm, "</p><li class='ml-4 text-gray-700'>$1</li><p>")
-      // Step 4: Convert bold
+      .replace(/^\s*### (.+)$/gm, "<h3 class='text-xl font-bold text-gray-900 mt-8 mb-4'>$1</h3>")
+      .replace(/^\s*## (.+)$/gm, "<h2 class='text-2xl font-bold text-gray-900 mt-10 mb-4'>$1</h2>")
+      // Step 3: Convert bold
       .replace(/\*\*(.+?)\*\*/g, "<strong class='font-semibold'>$1</strong>")
-      // Step 5: Convert double newlines to paragraph breaks
+      // Step 4: Convert double newlines to paragraph breaks
       .replace(/\n\n/g, "</p><p class='text-gray-700 leading-relaxed mb-4'>")
-      // Step 6: Convert single newlines to br
-      .replace(/\n(?!\n)/g, "<br/>")
-      // Step 7: Restore protected HTML tags
-      .replace(/\x00/g, "")
-      .replace(/\x01/g, "");
+      // Step 5: Wrap remaining text in paragraph tags
+      .replace(/^(.+)$/gm, (match) => {
+        // Skip if already wrapped in a block element
+        if (/^<(h[1-6]|p|blockquote|li|ul|ol|div)/i.test(match)) {
+          return match;
+        }
+        return "<p class='text-gray-700 leading-relaxed mb-4'>" + match + "</p>";
+      })
+      // Step 6: Remove empty paragraphs
+      .replace(/<p[^>]*>\s*<\/p>/g, "");
   };
 
   // Article Schema
