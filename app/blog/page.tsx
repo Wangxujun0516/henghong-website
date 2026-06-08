@@ -1,6 +1,31 @@
-import { FileText, Clock } from "lucide-react";
+import { FileText, Clock, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function BlogPage() {
+  const articles = [
+    {
+      slug: "how-to-find-reliable-rv-jack-manufacturer-china",
+      title: "How to Find a Reliable RV Jack Manufacturer in China",
+      date: "June 7, 2026",
+      category: "Sourcing Guide",
+      excerpt: "A step-by-step guide for RV manufacturers and distributors to find reliable suppliers in China. Covers factory audits, certifications, quality control, and OEM process.",
+    },
+    {
+      slug: "understanding-electric-jack-load-ratings",
+      title: "Understanding Electric Jack Load Ratings for RV Stability",
+      date: "June 4, 2026",
+      category: "Engineering Guide",
+      excerpt: "When selecting electric jacks for your RV or trailer, understanding load ratings is critical for safety and performance.",
+    },
+    {
+      slug: "intertek-factory-audit-guide",
+      title: "Intertek Factory Audit: What RV Manufacturers Need to Know",
+      date: "May 28, 2026",
+      category: "Factory News",
+      excerpt: "Learn about the Intertek factory verification process and why it matters for your supply chain.",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -17,53 +42,73 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Coming Soon Section */}
+      {/* Blog Posts Section */}
       <section className="py-16 md:py-24 bg-neutral">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6">
-              <FileText className="w-10 h-10 text-primary" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Main Content */}
+            <div className="lg:col-span-2">
+              <h2 className="text-2xl font-bold text-gray-900 mb-8">Latest Articles</h2>
+              
+              <div className="space-y-6">
+                {articles.map((article) => (
+                  <article key={article.slug} className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="px-3 py-1 text-sm font-medium bg-primary/10 text-primary rounded-full">
+                        {article.category}
+                      </span>
+                      <span className="flex items-center gap-1 text-sm text-gray-500">
+                        <Clock className="w-4 h-4" />
+                        {article.date}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      <Link href={`/blog/${article.slug}`} className="hover:text-primary transition-colors">
+                        {article.title}
+                      </Link>
+                    </h3>
+                    <p className="text-gray-600 mb-4">{article.excerpt}</p>
+                    <Link
+                      href={`/blog/${article.slug}`}
+                      className="inline-flex items-center gap-1 text-primary font-medium hover:gap-2 transition-all"
+                    >
+                      Read more <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </article>
+                ))}
+              </div>
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-              Technical Resources Coming Soon
-            </h2>
-            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-              Our team is preparing comprehensive technical articles, engineering guides, and industry insights for RV manufacturers and parts distributors worldwide.
-            </p>
-            <div className="mt-8 flex items-center justify-center gap-2 text-sm text-gray-500">
-              <Clock className="w-4 h-4" />
-              <span>Expected launch: Q3 2026</span>
-            </div>
-          </div>
 
-          {/* Preview Topics */}
-          <div className="mt-12 bg-white rounded-xl p-8 border border-gray-200">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Upcoming Content Topics</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {[
-                "Electric Jack Load Rating Calculations",
-                "OEM/ODM Customization Best Practices",
-                "RV Leveling System Installation Guides",
-                "Intertek Factory Audit Process",
-                "Corrosion Protection for Marine Environments",
-                "ISO9001 Quality Compliance",
-              ].map((topic, index) => (
-                <div key={index} className="flex items-center gap-3 text-gray-700">
-                  <div className="w-2 h-2 bg-primary rounded-full" />
-                  <span>{topic}</span>
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              <div className="bg-white rounded-xl p-6 border border-gray-200 sticky top-8">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Categories</h3>
+                <ul className="space-y-2">
+                  {["Sourcing Guide", "Engineering Guide", "Factory News", "Technical Articles"].map((category) => (
+                    <li key={category}>
+                      <button className="w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                        {category}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-8">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Newsletter</h3>
+                  <p className="text-sm text-gray-600 mb-4">Subscribe for the latest industry insights and product updates.</p>
+                  <div className="space-y-3">
+                    <input
+                      type="email"
+                      placeholder="Your email address"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    />
+                    <button className="w-full px-4 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors">
+                      Subscribe
+                    </button>
+                  </div>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-
-          {/* CTA */}
-          <div className="mt-8 text-center">
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors"
-            >
-              Contact Us for Technical Support
-            </a>
           </div>
         </div>
       </section>
