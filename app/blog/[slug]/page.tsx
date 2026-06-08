@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ArrowLeft, Calendar, Tag } from "lucide-react";
 import Link from "next/link";
 import BlogSidebar from "@/components/blog/BlogSidebar";
@@ -7,6 +8,7 @@ const articles = {
     title: "Understanding Electric Jack Load Ratings for RV Stability",
     date: "June 4, 2026",
     category: "Engineering Guide",
+    description: "Learn how to properly assess load requirements when selecting electric jacks for your RV or trailer. Covers static vs dynamic load, safety factors, and common ratings.",
     content: `
       ## Introduction
       When selecting electric jacks for your RV or trailer, understanding load ratings is critical for safety and performance. This guide explains how to properly assess your load requirements.
@@ -45,6 +47,7 @@ const articles = {
     title: "Intertek Factory Audit: What RV Manufacturers Need to Know",
     date: "May 28, 2026",
     category: "Factory News",
+    description: "Learn about the Intertek factory verification process and why it matters for your supply chain. Covers audit steps, benefits, and Henghong's certification status.",
     content: `
       ## What is Intertek Verification?
 
@@ -73,8 +76,9 @@ const articles = {
     title: "How to Find a Reliable RV Jack Manufacturer in China",
     date: "June 7, 2026",
     category: "Sourcing Guide",
+    description: "A step-by-step guide for RV manufacturers and distributors to find a reliable RV jack manufacturer in China. Covers factory audits, certifications, quality control, and the OEM process.",
     content: `
-      <blockquote><p><strong>TL;DR:</strong> Finding a reliable RV jack manufacturer in China requires verifying factory credentials (Intertek, ISO9001), auditing manufacturing capabilities (CNC machinery, robotic welding), checking quality control processes (load testing, salt-spray testing), and assessing OEM/ODM experience. Start with <a href="/about">Intertek-verified suppliers</a> who have a proven export track record to 40+ countries.</p></blockquote>
+      <blockquote class="bg-gray-100 border-l-4 border-primary p-4 my-6"><p class="text-gray-700"><strong>TL;DR:</strong> Finding a reliable RV jack manufacturer in China requires verifying factory credentials (Intertek, ISO9001), auditing manufacturing capabilities (CNC machinery, robotic welding), checking quality control processes (load testing, salt-spray testing), and assessing OEM/ODM experience. Start with <a href="/about" class="text-primary hover:underline">Intertek-verified suppliers</a> who have a proven export track record to 40+ countries.</p></blockquote>
 
       ## What Makes an RV Jack Manufacturer "Reliable"?
 
@@ -103,8 +107,8 @@ const articles = {
 
       ### Step 1: Check Third-Party Verification (Intertek)
 
-      <img src="/images/certifications/intertek-verified.webp" alt="Intertek Verified Supplier certification for RV jack manufacturer China" className="w-full h-auto rounded-lg mb-4" />
-      <p className="text-sm text-gray-500 italic mb-6">Intertek verification confirms the manufacturer has passed a rigorous on-site factory audit.</p>
+      <img src="/images/certifications/intertek-verified.webp" alt="Intertek Verified Supplier certification for RV jack manufacturer China" class="w-full h-auto rounded-lg mb-4" />
+      <p class="text-sm text-gray-500 italic mb-6">Intertek verification confirms the manufacturer has passed a rigorous on-site factory audit.</p>
 
       Third-party verification is the fastest way to confirm a manufacturer's legitimacy. Intertek, one of the world's leading inspection and certification organizations, conducts on-site factory audits that verify:
 
@@ -117,25 +121,25 @@ const articles = {
 
       ### Step 2: Audit Manufacturing Capabilities
 
-      <img src="/images/company/cnc-workshop.webp" alt="CNC machining workshop at Henghong RV jack factory" className="w-full h-auto rounded-lg mb-4" />
-      <p className="text-sm text-gray-500 italic mb-4">Advanced CNC machinery indicates the manufacturer has in-house production capabilities.</p>
+      <img src="/images/company/cnc-workshop.webp" alt="CNC machining workshop at Henghong RV jack factory" class="w-full h-auto rounded-lg mb-4" />
+      <p class="text-sm text-gray-500 italic mb-4">Advanced CNC machinery indicates the manufacturer has in-house production capabilities.</p>
 
-      <img src="/images/company/robotic-welding.webp" alt="Robotic welding station at Henghong electric trailer jack factory" className="w-full h-auto rounded-lg mb-4" />
-      <p className="text-sm text-gray-500 italic mb-6">Automated robotic welding ensures consistent weld quality across production batches.</p>
+      <img src="/images/company/robotic-welding.webp" alt="Robotic welding station at Henghong electric trailer jack factory" class="w-full h-auto rounded-lg mb-4" />
+      <p class="text-sm text-gray-500 italic mb-6">Automated robotic welding ensures consistent weld quality across production batches.</p>
 
       A genuine manufacturer should have:
 
       - **CNC machining**: Precision cutting and forming of metal components
       - **Welding capabilities**: Robotic or automated welding for consistent quality
-      - **Assembly lines**: Organized production flow for <a href="/products#electric-jacks">electric jacks</a> and <a href="/products#automatic-leveling-systems">leveling systems</a>
+      - **Assembly lines**: Organized production flow for <a href="/products#electric-jacks" class="text-primary hover:underline">electric jacks</a> and <a href="/products#automatic-leveling-systems" class="text-primary hover:underline">leveling systems</a>
       - **Powder coating**: In-house or dedicated coating for corrosion resistance
 
       Ask for a video tour or schedule a physical audit. If the supplier hesitates to show their factory floor, that's a red flag.
 
       ### Step 3: Verify Quality Control Processes
 
-      <img src="/images/company/finished-product-warehouse.webp" alt="Finished product warehouse at Henghong RV leveling system factory" className="w-full h-auto rounded-lg mb-4" />
-      <p className="text-sm text-gray-500 italic mb-6">A well-organized warehouse indicates systematic quality management.</p>
+      <img src="/images/company/finished-product-warehouse.webp" alt="Finished product warehouse at Henghong RV leveling system factory" class="w-full h-auto rounded-lg mb-4" />
+      <p class="text-sm text-gray-500 italic mb-6">A well-organized warehouse indicates systematic quality management.</p>
 
       Quality control is what separates reliable manufacturers from commodity producers. Look for:
 
@@ -192,38 +196,52 @@ const articles = {
 
       ## Frequently Asked Questions
 
-      **Q1: How do I verify if an RV jack manufacturer in China is legitimate?**
-      A: Request their Intertek or SGS factory audit report. Visit the factory in person or via video tour. Check their business license and export documentation.
-
-      **Q2: What certifications should a reliable RV jack factory have?**
-      A: At minimum, ISO9001:2015 quality management certification and Intertek factory verification. CE, FCC, and IC certifications are also important.
-
-      **Q3: What is the typical MOQ for electric trailer jacks from China?**
-      A: MOQ varies by manufacturer and model. Some accept small trial orders (50-100 units), while others require bulk orders (500+ units).
-
-      **Q4: How long does OEM production take for custom RV jacks?**
-      A: Typical lead time is 15-30 days after order confirmation, depending on complexity. Custom designs may require additional time.
-
-      **Q5: Can I visit the factory before placing an order?**
-      A: Yes, reputable manufacturers welcome factory visits. Intertek-verified suppliers can arrange tours or virtual tours via video call.
+      <div class="space-y-4 my-6">
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q1: How do I verify if an RV jack manufacturer in China is legitimate?</p><p class="text-gray-700 mt-2">A: Request their Intertek or SGS factory audit report. Visit the factory in person or via video tour. Check their business license and export documentation.</p></div>
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q2: What certifications should a reliable RV jack factory have?</p><p class="text-gray-700 mt-2">A: At minimum, ISO9001:2015 quality management certification and Intertek factory verification. CE, FCC, and IC certifications are also important.</p></div>
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q3: What is the typical MOQ for electric trailer jacks from China?</p><p class="text-gray-700 mt-2">A: MOQ varies by manufacturer and model. Some accept small trial orders (50-100 units), while others require bulk orders (500+ units).</p></div>
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q4: How long does OEM production take for custom RV jacks?</p><p class="text-gray-700 mt-2">A: Typical lead time is 15-30 days after order confirmation, depending on complexity. Custom designs may require additional time.</p></div>
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q5: Can I visit the factory before placing an order?</p><p class="text-gray-700 mt-2">A: Yes, reputable manufacturers welcome factory visits. Intertek-verified suppliers can arrange tours or virtual tours via video call.</p></div>
+      </div>
 
       ## Start Your Sourcing Journey with Henghong
 
-      Henghong Intelligent Equipment Co., Ltd. is an <a href="/about">Intertek-verified manufacturer</a> with 22+ years of export experience. Our 39,000㎡ factory features 7 production lines, a provincial-level R&D center with 21 engineers, and ISO9001:2015 certification.
+      Henghong Intelligent Equipment Co., Ltd. is an <a href="/about" class="text-primary hover:underline">Intertek-verified manufacturer</a> with 22+ years of export experience. Our 39,000㎡ factory features 7 production lines, a provincial-level R&D center with 21 engineers, and ISO9001:2015 certification.
 
-      We specialize in <a href="/about">OEM/ODM manufacturing</a> of RV leveling systems, electric jacks, and stabilizer jacks — exported to 40+ countries worldwide.
+      We specialize in <a href="/about" class="text-primary hover:underline">OEM/ODM manufacturing</a> of RV leveling systems, electric jacks, and stabilizer jacks — exported to 40+ countries worldwide.
 
-      <div className="mt-6 flex flex-col sm:flex-row gap-4">
-        <a href="/contact#quote" className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors">
-          📩 Request a quote
-        </a>
-        <a href="mailto:sales@henghongrv.com" className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-colors">
-          📞 Contact our sales team
-        </a>
+      <div class="mt-6 flex flex-col sm:flex-row gap-4">
+        <a href="/contact#quote" class="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors">Request a quote</a>
+        <a href="mailto:sales@henghongrv.com" class="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-colors">Contact our sales team</a>
       </div>
     `,
   },
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const article = articles[slug as keyof typeof articles];
+
+  if (!article) {
+    return { title: "Article Not Found" };
+  }
+
+  return {
+    title: `${article.title} | Henghong`,
+    description: article.description,
+    alternates: {
+      canonical: `https://www.henghongrv.com/blog/${slug}`,
+    },
+    openGraph: {
+      title: `${article.title} | Henghong`,
+      description: article.description,
+      url: `https://www.henghongrv.com/blog/${slug}`,
+      images: slug === "how-to-find-reliable-rv-jack-manufacturer-china"
+        ? [{ url: "/images/company/factory-front-view.webp", width: 1200, height: 630 }]
+        : undefined,
+    },
+  };
+}
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
@@ -239,6 +257,74 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </div>
     );
   }
+
+  // Render markdown content with HTML protection
+  const renderContent = (content: string) => {
+    return content
+      // Step 1: Protect existing HTML tags
+      .replace(/<\/?[a-z][^>]*>/gi, (match) => `\x00${match}\x01`)
+      // Step 2: Convert markdown headings
+      .replace(/^### (.+)$/gm, "</p><h3 class='text-xl font-bold text-gray-900 mt-8 mb-4'>$1</h3><p>")
+      .replace(/^## (.+)$/gm, "</p><h2 class='text-2xl font-bold text-gray-900 mt-10 mb-4'>$1</h2><p>")
+      // Step 3: Convert lists
+      .replace(/^- (.+)$/gm, "</p><li class='ml-4 text-gray-700'>$1</li><p>")
+      .replace(/^\d+\. (.+)$/gm, "</p><li class='ml-4 text-gray-700'>$1</li><p>")
+      // Step 4: Convert bold
+      .replace(/\*\*(.+?)\*\*/g, "<strong class='font-semibold'>$1</strong>")
+      // Step 5: Convert double newlines to paragraph breaks
+      .replace(/\n\n/g, "</p><p class='text-gray-700 leading-relaxed mb-4'>")
+      // Step 6: Convert single newlines to br
+      .replace(/\n(?!\n)/g, "<br/>")
+      // Step 7: Restore protected HTML tags
+      .replace(/\x00/g, "")
+      .replace(/\x01/g, "");
+  };
+
+  // Article Schema
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.description,
+    author: { "@type": "Organization", name: "Henghong Intelligent Equipment Co., Ltd." },
+    datePublished: article.date,
+    publisher: { "@type": "Organization", name: "Henghong Intelligent Equipment Co., Ltd." },
+  };
+
+  // FAQPage Schema (only for the sourcing guide article)
+  const faqSchema = resolvedParams.slug === "how-to-find-reliable-rv-jack-manufacturer-china"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How do I verify if an RV jack manufacturer in China is legitimate?",
+            acceptedAnswer: { "@type": "Answer", text: "Request their Intertek or SGS factory audit report. Visit the factory in person or via video tour. Check their business license and export documentation." },
+          },
+          {
+            "@type": "Question",
+            name: "What certifications should a reliable RV jack factory have?",
+            acceptedAnswer: { "@type": "Answer", text: "At minimum, ISO9001:2015 quality management certification and Intertek factory verification. For international markets, CE, FCC, and IC certifications are also important." },
+          },
+          {
+            "@type": "Question",
+            name: "What is the typical MOQ for electric trailer jacks from China?",
+            acceptedAnswer: { "@type": "Answer", text: "MOQ varies by manufacturer and model. Some accept small trial orders (50-100 units), while others require bulk orders (500+ units). Contact the manufacturer directly for specific MOQ terms." },
+          },
+          {
+            "@type": "Question",
+            name: "How long does OEM production take for custom RV jacks?",
+            acceptedAnswer: { "@type": "Answer", text: "Typical lead time is 15-30 days after order confirmation, depending on complexity. Custom designs with new tooling may require additional time for prototyping and testing." },
+          },
+          {
+            "@type": "Question",
+            name: "Can I visit the factory before placing an order?",
+            acceptedAnswer: { "@type": "Answer", text: "Yes, reputable manufacturers welcome factory visits. Intertek-verified suppliers are accustomed to regular audits and can arrange factory tours. Virtual tours via video call are also available." },
+          },
+        ],
+      }
+    : null;
 
   return (
     <div className="min-h-screen bg-white">
@@ -277,18 +363,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <div
                 className="prose prose-gray max-w-none"
                 dangerouslySetInnerHTML={{
-                  __html: article.content
-                    .replace(/^### (.+)$/gm, "<h3 class='text-xl font-bold text-gray-900 mt-8 mb-4'>$1</h3>")
-                    .replace(/^## (.+)$/gm, "<h2 class='text-2xl font-bold text-gray-900 mt-10 mb-4'>$1</h2>")
-                    .replace(/^- (.+)$/gm, "<li class='ml-4 text-gray-700'>$1</li>")
-                    .replace(/^\d+\. (.+)$/gm, "<li class='ml-4 text-gray-700'>$1</li>")
-                    .replace(/\|(.+)\|/g, "<table class='w-full border-collapse mt-4'><tbody>$1</tbody></table>")
-                    .replace(/\| (.+) \| (.+) \|/g, "<tr><td class='border border-gray-300 px-4 py-2 font-medium'>$1</td><td class='border border-gray-300 px-4 py-2'>$2</td></tr>")
-                    .replace(/\*\*(.+?)\*\*/g, "<strong class='font-semibold'>$1</strong>")
-                    .replace(/\n/g, "<p class='text-gray-700 leading-relaxed mb-4'>")
+                  __html: renderContent(article.content),
                 }}
               />
             </article>
+
+            {/* JSON-LD Schemas */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(articleSchema),
+              }}
+            />
+            {faqSchema && (
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify(faqSchema),
+                }}
+              />
+            )}
           </main>
 
           {/* Sidebar */}
