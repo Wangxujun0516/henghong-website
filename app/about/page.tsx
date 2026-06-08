@@ -11,14 +11,14 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "About Us - Intertek Verified RV Equipment Manufacturer",
   description:
-    "Henghong RV Equipment: An Intertek-Verified Manufacturer with 39,000㎡ facility, 100+ skilled staff, and ISO9001:2015 certification for global RV OEMs and distributors.",
+    "Henghong RV Equipment: An Intertek verified manufacturer in China specializing in RV leveling system manufacturing. 39,000㎡ facility, ISO9001:2015 certified, serving global RV OEMs.",
   alternates: {
     canonical: "https://www.henghongrv.com/about",
   },
   openGraph: {
     title: "About Henghong - Intertek Verified RV Equipment Manufacturer",
     description:
-      "Learn about Henghong's 39,000㎡ manufacturing facility, ISO9001:2015 certification, and 22+ years of experience as an OEM/ODM supplier for global RV manufacturers.",
+      "Learn about Henghong — a leading RV leveling system manufacturer in China. 39,000㎡ Intertek-verified facility, ISO9001:2015, 22+ years OEM/ODM experience.",
     images: [{ url: "/images/company/Overview.jpg", width: 1200, height: 630 }],
   },
 };

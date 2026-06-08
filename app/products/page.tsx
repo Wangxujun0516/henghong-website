@@ -6,7 +6,7 @@ import { getAllProducts, getProductCategories } from "@/lib/products";
 export const metadata: Metadata = {
   title: "RV Leveling Systems & Electric Jacks - OEM Manufacturer",
   description:
-    "Browse Henghong's premium automatic leveling systems, electric stabilizer jacks, and RV equipment. Intertek Verified OEM/ODM manufacturer serving global RV manufacturers and distributors.",
+    "Browse Henghong's premium automatic leveling systems, electric stabilizer jacks, and RV equipment. As a trusted RV jack OEM factory, we serve global RV manufacturers and distributors.",
   alternates: {
     canonical: "https://www.henghongrv.com/products",
   },
@@ -29,7 +29,7 @@ export default function ProductsPage() {
           <h1 className="text-4xl font-bold sm:text-5xl">Our Products</h1>
           <p className="mt-4 max-w-2xl text-lg text-white/80">
             High-precision automatic leveling systems and electric stabilizer
-            jacks engineered for global RV and industrial markets.
+            jacks from a trusted RV jack OEM factory, engineered for global RV and industrial markets.
           </p>
         </div>
       </section>
