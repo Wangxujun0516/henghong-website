@@ -4,74 +4,6 @@ import Link from "next/link";
 import BlogSidebar from "@/components/blog/BlogSidebar";
 
 const articles = {
-  "understanding-electric-jack-load-ratings": {
-    title: "Understanding Electric Jack Load Ratings for RV Stability",
-    date: "June 4, 2026",
-    category: "Engineering Guide",
-    description: "Learn how to properly assess load requirements when selecting electric jacks for your RV or trailer. Covers static vs dynamic load, safety factors, and common ratings.",
-    content: `
-      ## Introduction
-      When selecting electric jacks for your RV or trailer, understanding load ratings is critical for safety and performance. This guide explains how to properly assess your load requirements.
-
-      ## Key Load Rating Concepts
-
-      ### Static Load vs Dynamic Load
-      - **Static Load**: The weight supported when the vehicle is stationary
-      - **Dynamic Load**: The forces encountered during travel or operation
-
-      ### Safety Factor
-      Always select jacks with a safety factor of at least 2:1. This means if your calculated load is 1,500 lbs, choose jacks rated for at least 3,000 lbs.
-
-      ## Load Calculation Formula
-
-      | Component | Formula |
-      |-----------|---------|
-      | Tongue Weight | (GVW x TW%) / 100 |
-      | Total Load per Jack | Total Weight / Number of Jacks |
-      | Required Rating | Calculated Load x Safety Factor |
-
-      ## Common Load Ratings
-
-      | Rating | Applications |
-      |--------|--------------|
-      | 2,000 lbs | Small campers, pop-ups |
-      | 3,500 lbs | Mid-size travel trailers |
-      | 5,000 lbs | Large fifth wheels |
-      | 7,500 lbs | Heavy commercial trailers |
-
-      ## Conclusion
-      Proper load rating selection ensures safe and reliable operation of your RV stabilization system. Always consult with your equipment manufacturer for specific requirements.
-    `,
-  },
-  "intertek-factory-audit-guide": {
-    title: "Intertek Factory Audit: What RV Manufacturers Need to Know",
-    date: "May 28, 2026",
-    category: "Factory News",
-    description: "Learn about the Intertek factory verification process and why it matters for your supply chain. Covers audit steps, benefits, and Henghong's certification status.",
-    content: `
-      ## What is Intertek Verification?
-
-      Intertek is a leading global provider of quality and safety solutions. Their factory verification process ensures that manufacturers meet international standards.
-
-      ## Audit Process Overview
-
-      1. **Initial Assessment**: Review of company documentation and certifications
-      2. **On-site Inspection**: Evaluation of production facilities and quality control processes
-      3. **Product Testing**: Verification of product compliance with industry standards
-      4. **Report Generation**: Comprehensive audit report with recommendations
-
-      ## Benefits of Intertek Certification
-
-      - Global recognition and credibility
-      - Access to international markets
-      - Improved supply chain trust
-      - Reduced risk for buyers
-
-      ## Henghong's Certification Status
-
-      We are proud to maintain Intertek Verified Supplier status, demonstrating our commitment to quality and compliance.
-    `,
-  },
   "how-to-find-reliable-rv-jack-manufacturer-china": {
     title: "How to Find a Reliable RV Jack Manufacturer in China",
     date: "June 7, 2026",
@@ -456,7 +388,37 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       .replace(/^\s*## (.+)$/gm, "<h2 class='text-2xl font-bold text-gray-900 mt-10 mb-4'>$1</h2>")
       // Step 3: Convert bold
       .replace(/\*\*(.+?)\*\*/g, "<strong class='font-semibold'>$1</strong>")
-      // Step 4: Convert double newlines to paragraph breaks
+      // Step 4: Convert markdown tables to HTML tables
+      .replace(/^\|(.+)\|[\s\S]*?^\|(.+)\|$/gm, (tableBlock) => {
+        const rows = tableBlock.trim().split('\n').filter(row => row.trim().startsWith('|'));
+        if (rows.length < 3) return tableBlock;
+
+        const headerRow = rows[0];
+        const dataRows = rows.slice(2);
+
+        const cells = headerRow.split('|').filter(c => c.trim()).map(c => c.trim());
+        let html = '<div class="overflow-x-auto my-8"><table class="w-full border-collapse">';
+        
+        html += '<thead><tr class="bg-primary text-white">';
+        cells.forEach(cell => {
+          html += `<th class="border border-gray-300 px-4 py-3 text-left font-semibold">${cell}</th>`;
+        });
+        html += '</tr></thead><tbody>';
+
+        dataRows.forEach((row, idx) => {
+          const rowCells = row.split('|').filter(c => c.trim()).map(c => c.trim());
+          const bgClass = idx % 2 === 0 ? 'bg-white' : 'bg-gray-50';
+          html += `<tr class="${bgClass}">`;
+          rowCells.forEach(cell => {
+            html += `<td class="border border-gray-300 px-4 py-3">${cell}</td>`;
+          });
+          html += '</tr>';
+        });
+
+        html += '</tbody></table></div>';
+        return html;
+      })
+      // Step 5: Convert double newlines to paragraph breaks
       .replace(/\n\n/g, "</p><p class='text-gray-700 leading-relaxed mb-4'>")
       // Step 5: Wrap remaining text in paragraph tags
       .replace(/^(.+)$/gm, (match) => {

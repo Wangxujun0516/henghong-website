@@ -32,20 +32,6 @@ export default function BlogPage() {
       category: "Buying Guide",
       excerpt: "Compare electric vs hydraulic RV leveling systems for motorhomes and travel trailers. Learn how each system works, their pros and cons, and which one fits your needs.",
     },
-    {
-      slug: "understanding-electric-jack-load-ratings",
-      title: "Understanding Electric Jack Load Ratings for RV Stability",
-      date: "June 4, 2026",
-      category: "Engineering Guide",
-      excerpt: "When selecting electric jacks for your RV or trailer, understanding load ratings is critical for safety and performance.",
-    },
-    {
-      slug: "intertek-factory-audit-guide",
-      title: "Intertek Factory Audit: What RV Manufacturers Need to Know",
-      date: "May 28, 2026",
-      category: "Factory News",
-      excerpt: "Learn about the Intertek factory verification process and why it matters for your supply chain.",
-    },
   ];
 
   return (
