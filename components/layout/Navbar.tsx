@@ -13,7 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, type NavItem } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -49,15 +49,42 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {siteConfig.nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-primary/80 transition-colors hover:text-accent"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {siteConfig.nav.map((item: NavItem) => {
+            if (item.children) {
+              return (
+                <div key={item.label} className="relative group">
+                  <button className="text-sm font-medium text-primary/80 transition-colors hover:text-accent flex items-center gap-1">
+                    {item.label}
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div className="absolute left-0 mt-2 w-56 rounded-lg border border-border bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
+                      {item.children.map((child: NavItem) => (
+                        <Link
+                          key={child.href}
+                          href={child.href!}
+                          className="block px-4 py-2.5 text-sm text-primary/80 hover:text-accent hover:bg-gray-50 transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <Link
+                key={item.href}
+                href={item.href!}
+                className="text-sm font-medium text-primary/80 transition-colors hover:text-accent"
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-3">
@@ -81,16 +108,37 @@ export function Navbar() {
                 <SheetTitle>Menu</SheetTitle>
               </SheetHeader>
               <nav className="mt-6 flex flex-col gap-4">
-                {siteConfig.nav.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="text-base font-medium text-primary hover:text-accent"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {siteConfig.nav.map((item: NavItem) => {
+                  if (item.children) {
+                    return (
+                      <div key={item.label} className="flex flex-col gap-2">
+                        <span className="text-sm font-semibold text-primary/60 uppercase tracking-wide">{item.label}</span>
+                        <div className="flex flex-col gap-1 pl-3 border-l-2 border-gray-200">
+                          {item.children.map((child: NavItem) => (
+                            <Link
+                              key={child.href}
+                              href={child.href!}
+                              onClick={() => setOpen(false)}
+                              className="text-base font-medium text-primary hover:text-accent"
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  }
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href!}
+                      onClick={() => setOpen(false)}
+                      className="text-base font-medium text-primary hover:text-accent"
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
                 <Button asChild variant="cta" className="mt-4">
                   <Link href="/contact#quote" onClick={() => setOpen(false)}>
                     Get Quote

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, type NavItem } from "@/lib/site-config";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -24,16 +24,30 @@ export function Footer() {
               Quick Links
             </h4>
             <ul className="mt-4 space-y-2">
-              {siteConfig.nav.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-white/75 transition-colors hover:text-white"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {siteConfig.nav.map((item: NavItem) => {
+                if (item.children) {
+                  return item.children.map((child: NavItem) => (
+                    <li key={child.href}>
+                      <Link
+                        href={child.href!}
+                        className="text-sm text-white/75 transition-colors hover:text-white"
+                      >
+                        {child.label}
+                      </Link>
+                    </li>
+                  ));
+                }
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href!}
+                      className="text-sm text-white/75 transition-colors hover:text-white"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

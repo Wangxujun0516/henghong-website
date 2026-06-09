@@ -1,3 +1,9 @@
+export interface NavItem {
+  label: string;
+  href?: string;
+  children?: NavItem[];
+}
+
 export const siteConfig = {
   name: "Henghong Intelligent Equipment Co., Ltd.",
   shortName: "Henghong",
@@ -16,7 +22,13 @@ export const siteConfig = {
   nav: [
     { label: "Home", href: "/" },
     { label: "Products", href: "/products" },
-    { label: "Technical Resources", href: "/technical-resources" },
+    { 
+      label: "Resources",
+      children: [
+        { label: "Technical Resources", href: "/technical-resources" },
+        { label: "Blog", href: "/blog" },
+      ],
+    },
     { label: "About", href: "/about" },
     { label: "Honors", href: "/honors" },
     { label: "Contact", href: "/contact" },
