@@ -389,8 +389,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       // Step 3: Convert bold
       .replace(/\*\*(.+?)\*\*/g, "<strong class='font-semibold'>$1</strong>")
       // Step 4: Convert markdown tables to HTML tables
-      .replace(/^\s*\|(.+)\|[\s\S]*?^\s*\|(.+)\|$/gm, (tableBlock) => {
-        const rows = tableBlock.trim().split('\n').filter(row => row.trim().startsWith('|'));
+      .replace(/(\|\s*[\w\s]+\s*\|[\s\S]*?\|\s*[\w\s]+\s*\|)/gm, (tableBlock) => {
+        const lines = tableBlock.trim().split('\n').filter(line => line.trim() !== '');
+        const rows = lines.filter(row => row.trim().startsWith('|'));
         if (rows.length < 3) return tableBlock;
 
         const headerRow = rows[0];
@@ -418,10 +419,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         html += '</tbody></table></div>';
         return html;
       })
-      // Step 5: Convert double newlines to paragraph breaks
-      .replace(/\n\n/g, "</p><p class='text-gray-700 leading-relaxed mb-4'>")
-      // Step 5: Wrap remaining text in paragraph tags
-      .replace(/^(.+)$/gm, (match) => {
+      // Step 5: Convert double newlines to paragraph breaks (preserve HTML blocks)
+      .replace(/(?<!<\/table>)\n\n(?!<div)/g, "</p><p class='text-gray-700 leading-relaxed mb-4'>")
+      // Step 6: Wrap remaining text in paragraph tags (skip HTML blocks)
+      .replace(/^(?!<(div|table|tr|th|td|thead|tbody|\/div|\/table|\/tr|\/th|\/td|\/thead|\/tbody))(.+)$/gm, (match) => {
         // Skip if already wrapped in a block element
         if (/^<(h[1-6]|p|blockquote|li|ul|ol|div)/i.test(match)) {
           return match;
