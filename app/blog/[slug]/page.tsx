@@ -389,7 +389,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       // Step 3: Convert bold
       .replace(/\*\*(.+?)\*\*/g, "<strong class='font-semibold'>$1</strong>")
       // Step 4: Convert markdown tables to HTML tables
-      .replace(/(\|.*\|[\s\S]*?\|.*\|)/gm, (tableBlock) => {
+      .replace(/^\s*\|[^|]+\|.*\|[\s\S]*?(?:^\s*\|[^|]+\|.*\|$)/gm, (tableBlock) => {
         const lines = tableBlock.trim().split('\n').filter(line => line.trim() !== '');
         const rows = lines.filter(row => row.trim().startsWith('|'));
         if (rows.length < 3) return tableBlock;
@@ -407,11 +407,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         html += '</tr></thead><tbody>';
 
         dataRows.forEach((row, idx) => {
-          const rowCells = row.split('|').filter(c => c.trim()).map(c => c.trim());
+          const rowCells = row.split('|').filter((c, i) => i > 0 && i < (row.split('|').length - 1));
           const bgClass = idx % 2 === 0 ? 'bg-white' : 'bg-gray-50';
           html += `<tr class="${bgClass}">`;
           rowCells.forEach(cell => {
-            html += `<td class="border border-gray-300 px-4 py-3">${cell}</td>`;
+            html += `<td class="border border-gray-300 px-4 py-3">${cell.trim()}</td>`;
           });
           html += '</tr>';
         });
