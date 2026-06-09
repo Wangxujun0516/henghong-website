@@ -389,7 +389,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       // Step 3: Convert bold
       .replace(/\*\*(.+?)\*\*/g, "<strong class='font-semibold'>$1</strong>")
       // Step 4: Convert markdown tables to HTML tables
-      .replace(/^\|(.+)\|[\s\S]*?^\|(.+)\|$/gm, (tableBlock) => {
+      .replace(/^\s*\|(.+)\|[\s\S]*?^\s*\|(.+)\|$/gm, (tableBlock) => {
         const rows = tableBlock.trim().split('\n').filter(row => row.trim().startsWith('|'));
         if (rows.length < 3) return tableBlock;
 

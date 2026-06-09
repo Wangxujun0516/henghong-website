@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog - Industry Insights & Guides | Henghong",
+  title: "Blog - Industry Insights & Guides",
   description:
     "Explore engineering guides, buying guides, and industry insights about RV leveling systems, electric jacks, and stabilizers from Henghong.",
   alternates: {
