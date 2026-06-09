@@ -309,10 +309,29 @@ const articles = {
 
       ### Recommended Electric Models from Henghong
 
-      | Model | Capacity | Best For |
-      |-------|----------|----------|
-      | <a href="/products/hcpsr-6-400" class="text-primary hover:underline">HCPSR-6</a> | 12 tons (3T per jack) | Motorhomes, large travel trailers |
-      | <a href="/products/hcpsr-8-400" class="text-primary hover:underline">HCPSR-8</a> | 8 tons (2T per jack) | Mid-size travel trailers, fifth wheels |
+      <div class="overflow-x-auto my-8">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Model</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Capacity</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3"><a href="/products/hcpsr-6-400" class="text-primary hover:underline">HCPSR-6</a></td>
+              <td class="border border-gray-300 px-4 py-3">12 tons (3T per jack)</td>
+              <td class="border border-gray-300 px-4 py-3">Motorhomes, large travel trailers</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3"><a href="/products/hcpsr-8-400" class="text-primary hover:underline">HCPSR-8</a></td>
+              <td class="border border-gray-300 px-4 py-3">8 tons (2T per jack)</td>
+              <td class="border border-gray-300 px-4 py-3">Mid-size travel trailers, fifth wheels</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       ## Frequently Asked Questions
 
