@@ -1,5 +1,20 @@
 import { FileText, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog - Industry Insights & Guides | Henghong",
+  description:
+    "Explore engineering guides, buying guides, and industry insights about RV leveling systems, electric jacks, and stabilizers from Henghong.",
+  alternates: {
+    canonical: "https://www.henghongrv.com/blog",
+  },
+  openGraph: {
+    title: "Henghong Blog - RV Leveling Systems & Electric Jacks Insights",
+    description:
+      "Engineering guides, buying guides, and industry insights from Henghong Intelligent Equipment.",
+  },
+};
 
 export default function BlogPage() {
   const articles = [
@@ -9,6 +24,13 @@ export default function BlogPage() {
       date: "June 7, 2026",
       category: "Sourcing Guide",
       excerpt: "A step-by-step guide for RV manufacturers and distributors to find reliable suppliers in China. Covers factory audits, certifications, quality control, and OEM process.",
+    },
+    {
+      slug: "electric-vs-hydraulic-rv-leveling-systems",
+      title: "Electric vs Hydraulic RV Leveling Systems: Which Is Better?",
+      date: "June 10, 2026",
+      category: "Buying Guide",
+      excerpt: "Compare electric vs hydraulic RV leveling systems for motorhomes and travel trailers. Learn how each system works, their pros and cons, and which one fits your needs.",
     },
     {
       slug: "understanding-electric-jack-load-ratings",
