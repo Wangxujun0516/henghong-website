@@ -66,7 +66,7 @@ export default function BlogPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-8">Latest Articles</h2>
               
               <div className="space-y-6">
-                {articles.map((article) => (
+                {articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((article) => (
                   <article key={article.slug} className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow">
                     <div className="flex items-center gap-2 mb-4">
                       <span className="px-3 py-1 text-sm font-medium bg-primary/10 text-primary rounded-full">
