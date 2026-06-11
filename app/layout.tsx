@@ -57,6 +57,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="msvalidate.01" content="8D6F31DCA8160F9E6387E9F02FAC503E" />
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <a
           href="#main-content"
