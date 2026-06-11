@@ -32,6 +32,13 @@ export default function BlogPage() {
       category: "Buying Guide",
       excerpt: "Compare electric vs hydraulic RV leveling systems for motorhomes and travel trailers. Learn how each system works, their pros and cons, and which one fits your needs.",
     },
+    {
+      slug: "oem-process-custom-rv-jacks-made-in-china",
+      title: "The OEM Process: How Custom RV Jacks Are Made in China",
+      date: "June 14, 2026",
+      category: "Sourcing Guide",
+      excerpt: "A step-by-step guide to the OEM process for custom RV jacks and leveling systems in China. Covers design, prototyping, testing, production, and shipping from an Intertek-verified manufacturer.",
+    },
   ];
 
   return (

@@ -353,6 +353,203 @@ const articles = {
       </div>
     `,
   },
+  "oem-process-custom-rv-jacks-made-in-china": {
+    title: "The OEM Process: How Custom RV Jacks Are Made in China",
+    date: "June 14, 2026",
+    category: "Sourcing Guide",
+    description: "A step-by-step guide to the OEM process for custom RV jacks and leveling systems in China. Covers design, prototyping, testing, production, and shipping from an Intertek-verified manufacturer.",
+    content: `
+      <blockquote class="bg-gray-100 border-l-4 border-primary p-4 my-6"><p class="text-gray-700"><strong>TL;DR:</strong> The OEM process for custom RV jacks in China typically takes 4-8 weeks from initial inquiry to production completion. It involves five key stages: design & engineering, prototyping, quality verification, mass production, and shipping. Working with an <a href="/about" class="text-primary hover:underline">Intertek-verified manufacturer</a> ensures compliance with international standards throughout the process.</p></blockquote>
+
+      ## Understanding the OEM Process
+
+      Original Equipment Manufacturing (OEM) is the process of designing and manufacturing products according to a buyer's specifications. For RV jacks and leveling systems, this typically involves customizing:
+
+      - Load capacity and stroke length
+      - Mounting bracket design
+      - Electrical specifications (voltage, connectors)
+      - Control system integration
+      - Branding and packaging
+
+      <img src="/images/company/factory-front-view.webp" alt="Henghong OEM factory - 39,000㎡ facility for custom RV jack manufacturing" class="w-full h-auto rounded-lg mb-4" />
+      <p class="text-sm text-gray-500 italic mb-6">Henghong's 39,000㎡ OEM facility with 7 production lines</p>
+
+      ## Stage 1: Design & Engineering
+
+      The OEM process begins with understanding your requirements:
+
+      - **Technical specifications**: Load capacity, stroke length, dimensions
+      - **CAD drawings**: 2D/3D designs of custom components
+      - **Material selection**: Steel grade, coating requirements
+      - **Testing standards**: Load testing, environmental testing
+
+      Our engineering team with 21 R&D engineers will review your requirements and provide:
+      - Design feasibility assessment
+      - Cost estimation
+      - Lead time projection
+      - Engineering drawings for approval
+
+      ## Stage 2: Prototyping
+
+      Once the design is approved, prototype production begins:
+
+      <img src="/images/company/cnc-workshop.webp" alt="CNC machining for RV jack prototypes" class="w-full h-auto rounded-lg mb-4" />
+      <p class="text-sm text-gray-500 italic mb-4">CNC machining ensures precision in prototype production</p>
+
+      <img src="/images/company/robotic-welding.webp" alt="Robotic welding for consistent weld quality" class="w-full h-auto rounded-lg mb-4" />
+      <p class="text-sm text-gray-500 italic mb-6">Robotic welding ensures consistent weld quality across all units</p>
+
+      **Prototype process:**
+      - CNC machining of critical components
+      - Robotic welding for structural integrity
+      - Powder coating and finishing
+      - Assembly and functional testing
+
+      Sample lead time: 7-10 business days
+
+      ## Stage 3: Quality Verification
+
+      Before mass production begins, prototypes undergo rigorous testing:
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Test Type</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Method</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Frequency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Raw Material</td>
+              <td class="border border-gray-300 px-4 py-3">Spectrometer analysis</td>
+              <td class="border border-gray-300 px-4 py-3">Per batch</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">In-Process</td>
+              <td class="border border-gray-300 px-4 py-3">Visual + dimensional</td>
+              <td class="border border-gray-300 px-4 py-3">Every 50 units</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Load Test</td>
+              <td class="border border-gray-300 px-4 py-3">Full capacity test</td>
+              <td class="border border-gray-300 px-4 py-3">100% or AQL sampling</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Final</td>
+              <td class="border border-gray-300 px-4 py-3">Function + appearance</td>
+              <td class="border border-gray-300 px-4 py-3">100%</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Pre-Shipment</td>
+              <td class="border border-gray-300 px-4 py-3">Random inspection</td>
+              <td class="border border-gray-300 px-4 py-3">Per Order</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      ## Stage 4: Mass Production
+
+      Once prototypes are approved, mass production begins:
+
+      - **Production planning**: Schedule based on order quantity
+      - **Material procurement**: Raw materials sourced and inspected
+      - **Assembly line**: Multiple production lines for efficiency
+      - **In-line inspection**: Quality checks at each stage
+      - **Packaging**: Export-ready packaging with branding
+
+      Typical lead time: 10-20 business days
+
+      ## Stage 5: Shipping & Logistics
+
+      A reliable OEM manufacturer handles the entire logistics chain:
+
+      - **Export documentation**: Commercial invoice, packing list, bill of lading
+      - **Customs clearance**: China export procedures handled by the factory
+      - **Incoterms options**: FOB, CIF, DDP depending on your preference
+      - **Shipping modes**: Sea freight (20-35 days), air freight (5-10 days), express (3-7 days)
+      - **Lead time**: Typical 15-30 days from order confirmation
+
+      ## Typical OEM Timeline
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Stage</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Initial inquiry & quotation</td>
+              <td class="border border-gray-300 px-4 py-3">2-3 business days</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Design & drawing approval</td>
+              <td class="border border-gray-300 px-4 py-3">3-5 business days</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Sample production</td>
+              <td class="border border-gray-300 px-4 py-3">7-10 business days</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Sample testing & approval</td>
+              <td class="border border-gray-300 px-4 py-3">3-5 business days</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Mass production</td>
+              <td class="border border-gray-300 px-4 py-3">10-20 business days</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Shipping</td>
+              <td class="border border-gray-300 px-4 py-3">5-35 days (depends on mode)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      ## How to Choose the Right OEM Partner
+
+      **Must-have credentials:**
+      - Intertek or SGS factory verification
+      - ISO9001:2015 quality management
+      - In-house R&D engineering team
+      - Export experience to your target markets
+
+      **Questions to ask potential partners:**
+      - Can you provide references from buyers in my region?
+      - What is your typical defect rate?
+      - Do you have in-house testing facilities?
+      - What is your MOQ for custom OEM projects?
+      - Can you share a sample OEM agreement?
+
+      For a complete guide on vetting manufacturers, see <a href="/blog/how-to-find-reliable-rv-jack-manufacturer-china" class="text-primary hover:underline">How to Find a Reliable RV Jack Manufacturer in China</a>.
+
+      ## Frequently Asked Questions
+
+      <div class="space-y-4 my-6">
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q1: What is the minimum order quantity for OEM RV jacks?</p><p class="text-gray-700 mt-2">A: MOQ varies by complexity. Standard electric jacks may have MOQs of 100-500 units, while custom leveling systems may be lower. Contact the manufacturer for your specific requirements.</p></div>
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q2: How long does the OEM process take from start to finish?</p><p class="text-gray-700 mt-2">A: Typically 4-8 weeks from initial inquiry to production completion, depending on customization complexity and sample approval time.</p></div>
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q3: Can I get samples before committing to a full production run?</p><p class="text-gray-700 mt-2">A: Yes. Reputable manufacturers produce samples for testing and approval before mass production. Sample costs are often deducted from the first production order.</p></div>
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q4: What certifications can an OEM factory provide for my products?</p><p class="text-gray-700 mt-2">A: A qualified factory can provide CE, FCC, IC certifications, along with ISO9001 quality documentation and Intertek audit reports for your compliance requirements.</p></div>
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q5: How do I protect my design IP when working with a Chinese manufacturer?</p><p class="text-gray-700 mt-2">A: Sign an NDA before sharing specifications. Work with Intertek-verified suppliers who have a reputation to protect. Register design patents in China if the design is unique.</p></div>
+      </div>
+
+      ## Start Your OEM Project with Henghong
+
+      Henghong Intelligent Equipment Co., Ltd. is an <a href="/about" class="text-primary hover:underline">Intertek-verified manufacturer</a> with 22+ years of OEM/ODM experience. Our 39,000㎡ factory, 21 R&D engineers, and ISO9001:2015 certification make us a trusted partner for global RV brands.
+
+      We specialize in custom electric jacks, automatic leveling systems, and stabilizers for RV manufacturers and distributors worldwide.
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-4">
+        <a href="/contact#quote" class="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors">Start your OEM project</a>
+        <a href="mailto:sales@henghongrv.com" class="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-colors">Contact our engineering team</a>
+      </div>
+    `,
+  },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -377,6 +574,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         ? [{ url: "/images/company/factory-front-view.webp", width: 1200, height: 630 }]
         : slug === "electric-vs-hydraulic-rv-leveling-systems"
         ? [{ url: "/products/leveling/hcpsr-6-400-01-main.webp", width: 1200, height: 630 }]
+        : slug === "oem-process-custom-rv-jacks-made-in-china"
+        ? [{ url: "/images/company/factory-front-view.webp", width: 1200, height: 630 }]
         : undefined,
     },
   };
@@ -524,6 +723,38 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             "@type": "Question",
             name: "What is the warranty on Henghong leveling systems?",
             acceptedAnswer: { "@type": "Answer", text: "Henghong electric leveling systems come with a standard 2-year warranty covering manufacturing defects. Extended warranty options are available for bulk OEM orders." },
+          },
+        ],
+      }
+    : resolvedParams.slug === "oem-process-custom-rv-jacks-made-in-china"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What is the minimum order quantity for OEM RV jacks?",
+            acceptedAnswer: { "@type": "Answer", text: "MOQ varies by complexity. Standard electric jacks may have MOQs of 100-500 units, while custom leveling systems may be lower. Contact the manufacturer for your specific requirements." },
+          },
+          {
+            "@type": "Question",
+            name: "How long does the OEM process take from start to finish?",
+            acceptedAnswer: { "@type": "Answer", text: "Typically 4-8 weeks from initial inquiry to production completion, depending on customization complexity and sample approval time." },
+          },
+          {
+            "@type": "Question",
+            name: "Can I get samples before committing to a full production run?",
+            acceptedAnswer: { "@type": "Answer", text: "Yes. Reputable manufacturers produce samples for testing and approval before mass production. Sample costs are often deducted from the first production order." },
+          },
+          {
+            "@type": "Question",
+            name: "What certifications can an OEM factory provide for my products?",
+            acceptedAnswer: { "@type": "Answer", text: "A qualified factory can provide CE, FCC, IC certifications, along with ISO9001 quality documentation and Intertek audit reports for your compliance requirements." },
+          },
+          {
+            "@type": "Question",
+            name: "How do I protect my design IP when working with a Chinese manufacturer?",
+            acceptedAnswer: { "@type": "Answer", text: "Sign an NDA before sharing specifications. Work with Intertek-verified suppliers who have a reputation to protect. Register design patents in China if the design is unique." },
           },
         ],
       }
