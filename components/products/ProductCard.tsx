@@ -29,6 +29,31 @@ export function ProductCard({ product }: { product: Product }) {
         {product.model && (
           <p className="mt-1 text-sm text-muted">Model: {product.model}</p>
         )}
+
+        {/* Spec tags row */}
+        <div className="mt-3 flex flex-wrap gap-2">
+          {product.voltage && (
+            <span className="inline-flex items-center rounded-md bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
+              {product.voltage}
+            </span>
+          )}
+          {product.capacity?.system && (
+            <span className="inline-flex items-center rounded-md bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
+              {product.capacity.system}
+            </span>
+          )}
+          {product.stroke && (
+            <span className="inline-flex items-center rounded-md bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
+              {product.stroke}
+            </span>
+          )}
+          {product.material && (
+            <span className="inline-flex items-center rounded-md bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
+              {product.material}
+            </span>
+          )}
+        </div>
+
         {product.features && product.features.length > 0 && (
           <p className="mt-3 line-clamp-2 text-sm text-muted">
             {product.features[0]}

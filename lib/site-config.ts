@@ -79,10 +79,10 @@ export const honors = [
 ];
 
 export const partners = [
-  { name: "Partner 1", logo: "/images/partners/partner-thor-industries.jpg" },
-  { name: "CETC", logo: "/images/partners/partner-grand-design.png" },
-  { name: "CRRC", logo: "/images/partners/partner-forest-river.png" },
-  { name: "CASIC", logo: "/images/partners/partner-heartland-rv.jpg" },
+  { name: "Thor Industries", logo: "/images/partners/partner-thor-industries.jpg" },
+  { name: "Grand Design", logo: "/images/partners/partner-grand-design.png" },  
+  { name: "Forest River", logo: "/images/partners/partner-forest-river.png" },  
+  { name: "Heartland RV", logo: "/images/partners/partner-heartland-rv.jpg" },  
 ];
 
 export const whyChooseUs = [
