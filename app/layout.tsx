@@ -59,6 +59,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="msvalidate.01" content="8D6F31DCA8160F9E6387E9F02FAC503E" />
+        <meta name="google-site-verification" content="gbQPvyC9OT410KdApHlyP0CurQ6BprpHOXblITV7MyA" />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <a
