@@ -5,6 +5,7 @@ import { UmamiAnalytics } from "@/components/analytics/UmamiAnalytics";
 import { FloatingQuoteCTA } from "@/components/layout/FloatingQuoteCTA";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { siteConfig } from "@/lib/site-config";
 
 import "./globals.css";
@@ -18,24 +19,25 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | RV Leveling Systems & Electric Jacks`,
-    template: `%s | ${siteConfig.shortName}`,
+    default: "RV Leveling Systems & Electric Jacks Manufacturer | Henghong OEM/ODM",
+    template: "%s | Henghong Intelligent Equipment",
   },
-  description: siteConfig.description,
+  description: "Intertek verified manufacturer of automatic RV leveling systems and electric jacks. 12+ years, 39,000㎡ factory, OEM/ODM. Serving 40+ countries. Competitive factory-direct pricing.",
   keywords: [
     "RV leveling system",
+    "electric jack",
     "automatic leveling",
-    "electric stabilizer jack",
-    "Henghong",
-    "OEM RV equipment",
+    "RV parts manufacturer",
+    "OEM leveling system",
+    "hydraulic leveling China",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: "RV Leveling Systems & Electric Jacks OEM Manufacturer",
+    description: "Factory-direct RV leveling systems, Intertek verified, 12+ years experience.",
     images: [{ url: "/images/company/Overview.jpg", width: 1200, height: 630 }],
   },
   twitter: {
@@ -72,6 +74,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <FloatingQuoteCTA />
+        <WhatsAppFloat />
         <UmamiAnalytics />
       </body>
     </html>

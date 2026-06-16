@@ -184,7 +184,7 @@ const articles = {
 
       ## Start Your Sourcing Journey with Henghong
 
-      Henghong Intelligent Equipment Co., Ltd. is an <a href="/about" class="text-primary hover:underline">Intertek-verified manufacturer</a> with 22+ years of export experience. Our 39,000㎡ factory features 7 production lines, a provincial-level R&D center with 21 engineers, and ISO9001:2015 certification.
+      Henghong Intelligent Equipment Co., Ltd. is an <a href="/about" class="text-primary hover:underline">Intertek-verified manufacturer</a> with 12+ years of export experience. Our 39,000㎡ factory features 7 production lines, a provincial-level R&D center with 21 engineers, and ISO9001:2015 certification.
 
       We specialize in <a href="/about" class="text-primary hover:underline">OEM/ODM manufacturing</a> of RV leveling systems, electric jacks, and stabilizer jacks — exported to 40+ countries worldwide.
 
@@ -540,7 +540,7 @@ const articles = {
 
       ## Start Your OEM Project with Henghong
 
-      Henghong Intelligent Equipment Co., Ltd. is an <a href="/about" class="text-primary hover:underline">Intertek-verified manufacturer</a> with 22+ years of OEM/ODM experience. Our 39,000㎡ factory, 21 R&D engineers, and ISO9001:2015 certification make us a trusted partner for global RV brands.
+      Henghong Intelligent Equipment Co., Ltd. is an <a href="/about" class="text-primary hover:underline">Intertek-verified manufacturer</a> with 12+ years of OEM/ODM experience. Our 39,000㎡ factory, 21 R&D engineers, and ISO9001:2015 certification make us a trusted partner for global RV brands.
 
       We specialize in custom electric jacks, automatic leveling systems, and stabilizers for RV manufacturers and distributors worldwide.
 

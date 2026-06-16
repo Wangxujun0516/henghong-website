@@ -41,7 +41,7 @@ export const siteConfig = {
   ],
   trustSignals: [
     "Intertek Verified Supplier",
-    "22+ Years Experience",
+    "12+ Years Experience",
     "40+ Export Countries",
     "OEM/ODM Capable",
   ],
@@ -86,7 +86,7 @@ export const partners = [
 ];
 
 export const whyChooseUs = [
-  "22 years of industry experience and 19 years of export expertise",
+  "12 years of industry experience and 19 years of export expertise",
   "Provincial-level R&D center with 21 professional engineers",
   "Vertically integrated manufacturing with 7 production lines",
   "Strong customization capability for OEM/ODM projects",
