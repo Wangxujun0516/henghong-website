@@ -46,7 +46,7 @@ const organizationJsonLd = {
 };
 
 const factoryStats = [
-  { value: "Est. 2014", label: "Over a decade of specialized B2B manufacturing excellence.", icon: Award },
+  { value: "Est. 2004", label: "Over two decades of specialized B2B manufacturing excellence.", icon: Award },
   { value: "39,000 ㎡", label: "Expansive modern production workshops and raw material warehousing.", icon: Factory },
   { value: "100+ Staff", label: "Highly skilled production operators and certified technical specialists.", icon: Users },
   { value: "ISO9001:2015", label: "Fully integrated Quality Management System supervising every batch.", icon: Shield },
