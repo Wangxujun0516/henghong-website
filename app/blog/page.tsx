@@ -39,6 +39,13 @@ export default function BlogPage() {
       category: "Sourcing Guide",
       excerpt: "A step-by-step guide to the OEM process for custom RV jacks and leveling systems in China. Covers design, prototyping, testing, production, and shipping from an Intertek-verified manufacturer.",
     },
+    {
+      slug: "12v-vs-24v-rv-leveling-jacks",
+      title: "12V vs 24V Electric RV Leveling Jacks: Weight Capacity & Durability Comparison",
+      date: "June 18, 2026",
+      category: "Technical Guide",
+      excerpt: "A specification-level comparison of 12V vs 24V electric RV leveling jacks. Covers electrical mechanics, weight capacity, thermal performance, wire sizing, and total cost of ownership for fleet engineers.",
+    },
   ];
 
   return (

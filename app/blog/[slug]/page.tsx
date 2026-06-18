@@ -550,6 +550,242 @@ const articles = {
       </div>
     `,
   },
+  "12v-vs-24v-rv-leveling-jacks": {
+    title: "12V vs 24V Electric RV Leveling Jacks: Weight Capacity & Durability Comparison",
+    date: "June 18, 2026",
+    category: "Technical Guide",
+    description: "A specification-level comparison of 12V vs 24V electric RV leveling jacks. Covers electrical mechanics, weight capacity, thermal performance, wire sizing, and total cost of ownership for fleet engineers and procurement managers.",
+    content: `
+      <blockquote class="bg-gray-100 border-l-4 border-primary p-4 my-6"><p class="text-gray-700"><strong>TL;DR:</strong> 24V electric leveling jacks deliver 4x lower resistive losses, 25-30% cable cost reduction, and higher continuous static load capacity (8,000-12,000 lbs per leg) compared to 12V systems. For Class A motorhomes and fleet RVs with GVWR > 26,000 lbs, 24V architecture is the engineering-correct choice.</p></blockquote>
+
+      ## Executive Summary
+
+      Electric RV leveling jacks are safety-critical actuator assemblies. Their voltage architecture — 12V or 24V — directly governs actuator efficiency, thermal performance, cable sizing, and static load capacity.
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Parameter</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">12V System</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">24V System</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Nominal Voltage</td>
+              <td class="border border-gray-300 px-4 py-3">12 VDC</td>
+              <td class="border border-gray-300 px-4 py-3">24 VDC</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Current Draw (per jack)</td>
+              <td class="border border-gray-300 px-4 py-3">80-120 A</td>
+              <td class="border border-gray-300 px-4 py-3">40-60 A</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Wire Gauge (SAE J1292)</td>
+              <td class="border border-gray-300 px-4 py-3">2 AWG</td>
+              <td class="border border-gray-300 px-4 py-3">6 AWG</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Max Static Load (per leg)</td>
+              <td class="border border-gray-300 px-4 py-3">5,000-6,500 lbs</td>
+              <td class="border border-gray-300 px-4 py-3">8,000-12,000 lbs</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Thermal Overload Risk</td>
+              <td class="border border-gray-300 px-4 py-3">High</td>
+              <td class="border border-gray-300 px-4 py-3">Low</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Cable Cost Reduction</td>
+              <td class="border border-gray-300 px-4 py-3">—</td>
+              <td class="border border-gray-300 px-4 py-3">25-30%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      ## Core Electrical Mechanics: Amperage vs. Torque
+
+      ### Joule's Law and Resistive Line Loss
+
+      The fundamental constraint differentiating 12V and 24V leveling jack installations is resistive power dissipation. Joule's Law defines this:
+
+      <div class="bg-gray-100 rounded-lg p-4 my-6 text-center">
+        <p class="text-lg font-mono">P<sub>loss</sub> = I² × R</p>
+      </div>
+
+      Where:
+      - **P<sub>loss</sub>** = power dissipated as heat (Watts)
+      - **I** = current through conductor (Amperes)
+      - **R** = total conductor resistance (Ohms)
+
+      For a 12V system drawing 100A through 10 feet of 2 AWG copper wire:
+
+      <div class="bg-gray-100 rounded-lg p-4 my-6 text-center">
+        <p class="text-lg font-mono">P<sub>loss,12V</sub> = (100)² × 0.0318 = <strong>318 W</strong></p>
+      </div>
+
+      A 24V system delivering identical power draws half the current (50A):
+
+      <div class="bg-gray-100 rounded-lg p-4 my-6 text-center">
+        <p class="text-lg font-mono">P<sub>loss,24V</sub> = (50)² × 0.0318 = <strong>79.5 W</strong></p>
+      </div>
+
+      **Result: 24V reduces line losses by 75% (4x improvement)**
+
+      ### Motor Torque Sustainability
+
+      DC motor torque output is proportional to current, but thermal limits constrain sustained operation. When a motor enters thermal limiting:
+      - Torque output drops 15-40%
+      - Jack deployment time increases
+      - Risk of stalling under load
+
+      24V systems maintain full torque output continuously because:
+      - Lower current = lower internal motor heating
+      - Smaller conductor = less voltage drop at motor terminals
+      - Thermal cutout triggers less frequently
+
+      ## Weight Capacity Comparison
+
+      ### Static Load Ratings by Voltage Class
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">GVWR Class</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">12V Capacity</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">24V Capacity</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Recommendation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">≤ 14,000 lbs</td>
+              <td class="border border-gray-300 px-4 py-3">5,000 lb/leg</td>
+              <td class="border border-gray-300 px-4 py-3">8,000 lb/leg</td>
+              <td class="border border-gray-300 px-4 py-3 text-accent">12V acceptable</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">14,001-26,000 lbs</td>
+              <td class="border border-gray-300 px-4 py-3">6,500 lb/leg</td>
+              <td class="border border-gray-300 px-4 py-3">10,000 lb/leg</td>
+              <td class="border border-gray-300 px-4 py-3 text-accent font-semibold">24V recommended</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">> 26,000 lbs</td>
+              <td class="border border-gray-300 px-4 py-3">Not suitable</td>
+              <td class="border border-gray-300 px-4 py-3">12,000 lb/leg</td>
+              <td class="border border-gray-300 px-4 py-3 text-red-600 font-semibold">24V mandatory</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      ### Mechanical Design Factors
+
+      High-capacity 24V jacks incorporate mechanical upgrades beyond the motor:
+
+      - **Worm gear ratio**: 40:1 vs 20:1 for higher torque multiplication
+      - **Drive screw**: ACME/trapezoidal thread with self-locking capability
+      - **Steel specification**: AISI 8620 shaft, SAE 65 phosphor bronze wheel
+      - **Coating**: E-coat + TGIC powder, ≥1,000 hrs ASTM B117
+
+      ## Wire Sizing Economics
+
+      Per SAE J1292, recommended conductor sizing:
+
+      | Voltage | Current | Wire Gauge | Cost (4-jack harness) |
+      |---------|---------|------------|----------------------|
+      | 12V | 100A | 2 AWG | $320 |
+      | 24V | 50A | 6 AWG | $148 |
+
+      **Cable BOM savings: $172 per 4-jack installation**
+
+      ## Total Cost of Ownership (5-Year Model)
+
+      <div class="overflow-x-auto my-8">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Cost Component</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">12V System</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">24V System</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Delta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Jack assembly (4-jack kit)</td>
+              <td class="border border-gray-300 px-4 py-3">$1,200</td>
+              <td class="border border-gray-300 px-4 py-3">$1,450</td>
+              <td class="border border-gray-300 px-4 py-3">+$250</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Wiring harness</td>
+              <td class="border border-gray-300 px-4 py-3">$320</td>
+              <td class="border border-gray-300 px-4 py-3">$148</td>
+              <td class="border border-gray-300 px-4 py-3 text-green-600">-$172</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Maintenance (5-yr)</td>
+              <td class="border border-gray-300 px-4 py-3">$240</td>
+              <td class="border border-gray-300 px-4 py-3">$140</td>
+              <td class="border border-gray-300 px-4 py-3 text-green-600">-$100</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3 font-medium">Downtime cost</td>
+              <td class="border border-gray-300 px-4 py-3">$720</td>
+              <td class="border border-gray-300 px-4 py-3">$90</td>
+              <td class="border border-gray-300 px-4 py-3 text-green-600">-$630</td>
+            </tr>
+            <tr class="bg-white bg-accent/5">
+              <td class="border border-gray-300 px-4 py-3 font-bold">5-Year TCO</td>
+              <td class="border border-gray-300 px-4 py-3 font-bold">$2,565</td>
+              <td class="border border-gray-300 px-4 py-3 font-bold">$1,880</td>
+              <td class="border border-gray-300 px-4 py-3 text-green-600 font-bold">-$685</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      **At 500-unit fleet scale: $342,500 total 5-year cost avoidance with 24V architecture**
+
+      ## Specification Checklist for Purchase Orders
+
+      Before issuing a PO, confirm these certifications in the supplier's Technical Data Package:
+
+      - ✓ Rated static load capacity per leg (ASME B30.1)
+      - ✓ ASTM B117 salt spray certificate (≥500 hrs; ≥1,000 hrs for fleet)
+      - ✓ Motor insulation class (Class B minimum; Class F preferred)
+      - ✓ Worm gear material certifications (AISI 8620, SAE 65 PB)
+      - ✓ Self-locking drive screw confirmation
+      - ✓ IP rating (≥IP54; IP65 preferred)
+      - ✓ SAE J1292 wiring compliance documentation
+      - ✓ FMEA for thermal overload and power loss scenarios
+      - ✓ CAD drawings (DXF + STEP format)
+      - ✓ Bulk pricing schedule (MOQ tiers: 50, 250, 500, 1,000)
+
+      ## Frequently Asked Questions
+
+      <div class="space-y-4 my-6">
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q1: Why does a 24V electric RV jack allow for smaller wire gauges?</p><p class="text-gray-700 mt-2">A: At 24V, the system draws half the current for the same power output. Per Joule's Law (P = I²R), lower current means lower resistive losses, permitting smaller conductor cross-sections. SAE J1292 recommends 6 AWG for 24V vs 2 AWG for 12V — a 25-30% cable cost reduction.</p></div>
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q2: What steel specification is used in high-capacity 24V leveling jacks to prevent buckling?</p><p class="text-gray-700 mt-2">A: High-capacity 24V jacks use AISI 8620 alloy steel for the worm shaft (carburized for surface hardness) and SAE 65 phosphor bronze for the gear wheel. This combination provides high torque transmission with minimal wear and prevents buckling under static loads up to 12,000 lbs per leg.</p></div>
+      <div class="bg-gray-50 rounded-lg p-4"><p class="font-semibold text-gray-900">Q3: How does the self-locking mechanism work on Henghong RV jacks during power loss?</p><p class="text-gray-700 mt-2">A: Henghong jacks use an ACME/trapezoidal thread form with a lead angle less than the friction angle. This geometric design ensures the screw cannot back-drive under load — the jack remains locked in position even if power is lost during deployment or retraction.</p></div>
+      </div>
+
+      ## Request Engineering Documentation
+
+      For fleet procurement managers and OEM integration engineers requiring certified CAD drawings, ASTM B117 certificates, load-deflection data, and volume pricing schedules:
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-4">
+        <a href="/contact#quote" class="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors">Request Technical Data Package</a>
+        <a href="mailto:sales@henghongrv.com" class="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-colors">Contact Engineering Team</a>
+      </div>
+    `,
+  },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -576,6 +812,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         ? [{ url: "/products/leveling/hcpsr-6-400-01-main.webp", width: 1200, height: 630 }]
         : slug === "oem-process-custom-rv-jacks-made-in-china"
         ? [{ url: "/images/company/factory-front-view.webp", width: 1200, height: 630 }]
+        : slug === "12v-vs-24v-rv-leveling-jacks"
+        ? [{ url: "/products/leveling/hcpsr-6-400-01-main.webp", width: 1200, height: 630 }]
         : undefined,
     },
   };
@@ -755,6 +993,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             "@type": "Question",
             name: "How do I protect my design IP when working with a Chinese manufacturer?",
             acceptedAnswer: { "@type": "Answer", text: "Sign an NDA before sharing specifications. Work with Intertek-verified suppliers who have a reputation to protect. Register design patents in China if the design is unique." },
+          },
+        ],
+      }
+    : resolvedParams.slug === "12v-vs-24v-rv-leveling-jacks"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Why does a 24V electric RV jack allow for smaller wire gauges?",
+            acceptedAnswer: { "@type": "Answer", text: "At 24V, the system draws half the current for the same power output. Per Joule's Law (P = I²R), lower current means lower resistive losses, permitting smaller conductor cross-sections. SAE J1292 recommends 6 AWG for 24V vs 2 AWG for 12V — a 25-30% cable cost reduction." },
+          },
+          {
+            "@type": "Question",
+            name: "What steel specification is used in high-capacity 24V leveling jacks to prevent buckling?",
+            acceptedAnswer: { "@type": "Answer", text: "High-capacity 24V jacks use AISI 8620 alloy steel for the worm shaft (carburized for surface hardness) and SAE 65 phosphor bronze for the gear wheel. This combination provides high torque transmission with minimal wear and prevents buckling under static loads up to 12,000 lbs per leg." },
+          },
+          {
+            "@type": "Question",
+            name: "How does the self-locking mechanism work on Henghong RV jacks during power loss?",
+            acceptedAnswer: { "@type": "Answer", text: "Henghong jacks use an ACME/trapezoidal thread form with a lead angle less than the friction angle. This geometric design ensures the screw cannot back-drive under load — the jack remains locked in position even if power is lost during deployment or retraction." },
           },
         ],
       }
