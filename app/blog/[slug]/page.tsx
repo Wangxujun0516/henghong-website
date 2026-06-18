@@ -697,10 +697,32 @@ const articles = {
 
       Per SAE J1292, recommended conductor sizing:
 
-      | Voltage | Current | Wire Gauge | Cost (4-jack harness) |
-      |---------|---------|------------|----------------------|
-      | 12V | 100A | 2 AWG | $320 |
-      | 24V | 50A | 6 AWG | $148 |
+      <div class="overflow-x-auto my-8">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Voltage</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Current</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Wire Gauge</th>
+              <th class="border border-gray-300 px-4 py-3 text-left font-semibold">Cost (4-jack harness)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="border border-gray-300 px-4 py-3">12V</td>
+              <td class="border border-gray-300 px-4 py-3">100A</td>
+              <td class="border border-gray-300 px-4 py-3">2 AWG</td>
+              <td class="border border-gray-300 px-4 py-3">$320</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-4 py-3">24V</td>
+              <td class="border border-gray-300 px-4 py-3">50A</td>
+              <td class="border border-gray-300 px-4 py-3">6 AWG</td>
+              <td class="border border-gray-300 px-4 py-3">$148</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       **Cable BOM savings: $172 per 4-jack installation**
 
