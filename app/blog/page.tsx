@@ -1,6 +1,7 @@
 import { FileText, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { allBlogs } from "@/.contentlayer/generated";
 
 export const metadata: Metadata = {
   title: "Blog - Industry Insights & Guides",
@@ -17,36 +18,8 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const articles = [
-    {
-      slug: "how-to-find-reliable-rv-jack-manufacturer-china",
-      title: "How to Find a Reliable RV Jack Manufacturer in China",
-      date: "June 7, 2026",
-      category: "Sourcing Guide",
-      excerpt: "A step-by-step guide for RV manufacturers and distributors to find reliable suppliers in China. Covers factory audits, certifications, quality control, and OEM process.",
-    },
-    {
-      slug: "electric-vs-hydraulic-rv-leveling-systems",
-      title: "Electric vs Hydraulic RV Leveling Systems: Which Is Better?",
-      date: "June 10, 2026",
-      category: "Buying Guide",
-      excerpt: "Compare electric vs hydraulic RV leveling systems for motorhomes and travel trailers. Learn how each system works, their pros and cons, and which one fits your needs.",
-    },
-    {
-      slug: "oem-process-custom-rv-jacks-made-in-china",
-      title: "The OEM Process: How Custom RV Jacks Are Made in China",
-      date: "June 14, 2026",
-      category: "Sourcing Guide",
-      excerpt: "A step-by-step guide to the OEM process for custom RV jacks and leveling systems in China. Covers design, prototyping, testing, production, and shipping from an Intertek-verified manufacturer.",
-    },
-    {
-      slug: "12v-vs-24v-rv-leveling-jacks",
-      title: "12V vs 24V Electric RV Leveling Jacks: Weight Capacity & Durability Comparison",
-      date: "June 18, 2026",
-      category: "Technical Guide",
-      excerpt: "A specification-level comparison of 12V vs 24V electric RV leveling jacks. Covers electrical mechanics, weight capacity, thermal performance, wire sizing, and total cost of ownership for fleet engineers.",
-    },
-  ];
+  const articles = allBlogs
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <div className="min-h-screen bg-white">
@@ -73,7 +46,7 @@ export default function BlogPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-8">Latest Articles</h2>
               
               <div className="space-y-6">
-                {articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((article) => (
+                {articles.map((article) => (
                   <article key={article.slug} className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow">
                     <div className="flex items-center gap-2 mb-4">
                       <span className="px-3 py-1 text-sm font-medium bg-primary/10 text-primary rounded-full">
@@ -89,7 +62,7 @@ export default function BlogPage() {
                         {article.title}
                       </Link>
                     </h3>
-                    <p className="text-gray-600 mb-4">{article.excerpt}</p>
+                    <p className="text-gray-600 mb-4">{article.description}</p>
                     <Link
                       href={`/blog/${article.slug}`}
                       className="inline-flex items-center gap-1 text-primary font-medium hover:gap-2 transition-all"
@@ -106,7 +79,7 @@ export default function BlogPage() {
               <div className="bg-white rounded-xl p-6 border border-gray-200 sticky top-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Categories</h3>
                 <ul className="space-y-2">
-                  {["Sourcing Guide", "Engineering Guide", "Factory News", "Technical Articles"].map((category) => (
+                  {[...new Set(articles.map(a => a.category))].map((category) => (
                     <li key={category}>
                       <button className="w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                         {category}

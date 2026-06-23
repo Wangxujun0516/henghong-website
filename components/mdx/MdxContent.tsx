@@ -1,8 +1,8 @@
 "use client";
 
-import { getMDXComponent } from "next-contentlayer2/hooks";
+import { useMDXComponent } from "next-contentlayer2/hooks";
 
 export function MdxContent({ code }: { code: string }) {
-  const Component = getMDXComponent(code);
+  const Component = useMDXComponent(code);
   return <Component />;
 }

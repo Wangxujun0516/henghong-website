@@ -1,12 +1,22 @@
 import { FileDown, MessageSquare } from "lucide-react";
+import Link from "next/link";
 
-const recentArticles = [
-  { title: "Understanding Electric Jack Load Ratings", slug: "understanding-electric-jack-load-ratings" },
-  { title: "Intertek Factory Audit Guide", slug: "intertek-factory-audit-guide" },
-  { title: "Advanced Auto-Leveling Systems", slug: "advanced-auto-leveling-systems" },
-];
+interface BlogSidebarProps {
+  currentSlug?: string;
+  relatedPosts?: {
+    slug: string;
+    title: string;
+    category: string;
+  }[];
+}
 
-export default function BlogSidebar() {
+export default function BlogSidebar({ currentSlug, relatedPosts }: BlogSidebarProps) {
+  const displayPosts = relatedPosts?.length ? relatedPosts : [
+    { title: "Understanding Electric Jack Load Ratings", slug: "understanding-electric-jack-load-ratings" },
+    { title: "Intertek Factory Audit Guide", slug: "intertek-factory-audit-guide" },
+    { title: "Advanced Auto-Leveling Systems", slug: "advanced-auto-leveling-systems" },
+  ];
+
   return (
     <aside className="space-y-6">
       <div className="sticky top-24 bg-gradient-to-br from-primary to-primary-dark rounded-xl p-6 text-white">
@@ -35,16 +45,18 @@ export default function BlogSidebar() {
       </div>
 
       <div className="bg-white border border-gray-200 rounded-xl p-6">
-        <h3 className="text-lg font-bold text-gray-900">Recent Articles</h3>
+        <h3 className="text-lg font-bold text-gray-900">
+          {relatedPosts?.length ? "Related Articles" : "Recent Articles"}
+        </h3>
         <ul className="mt-4 space-y-3">
-          {recentArticles.map((article, index) => (
-            <li key={index}>
-              <a
+          {displayPosts.map((article, index) => (
+            <li key={article.slug}>
+              <Link
                 href={`/blog/${article.slug}`}
-                className="text-sm text-gray-600 hover:text-primary transition-colors line-clamp-1"
+                className={`text-sm hover:text-primary transition-colors line-clamp-2 ${article.slug === currentSlug ? "text-primary font-medium" : "text-gray-600"}`}
               >
                 {article.title}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

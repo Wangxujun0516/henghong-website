@@ -3,6 +3,29 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
+export const Blog = defineDocumentType(() => ({
+  name: "Blog",
+  filePathPattern: "blog/**/*.mdx",
+  contentType: "mdx",
+  fields: {
+    title: { type: "string", required: true },
+    date: { type: "string", required: true },
+    category: { type: "string", required: true },
+    description: { type: "string", required: true },
+    image: { type: "string", required: false },
+  },
+  computedFields: {
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
+    },
+    url: {
+      type: "string",
+      resolve: (doc) => `/blog/${doc._raw.sourceFileName.replace(/\.mdx$/, "")}`,
+    },
+  },
+}));
+
 export const Product = defineDocumentType(() => ({
   name: "Product",
   filePathPattern: "products/**/*.mdx",
@@ -42,7 +65,7 @@ export const About = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "content",
   disableImportAliasWarning: true,
-  documentTypes: [Product, About],
+  documentTypes: [Blog, Product, About],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
