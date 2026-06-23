@@ -76,6 +76,63 @@ export default async function ProductDetailPage({ params }: PageProps) {
     },
   };
 
+  const hcpsr6JsonLd = product.slug === "hcpsr-6-400" ? {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${siteConfig.url}/products/hcpsr-6-400#product`,
+    "name": "12T Auto Electric Leveling System (HCPSR-6)",
+    "image": `${siteConfig.url}${product.images?.[0] || "/favicon.ico"}`,
+    "description": "Heavy-duty 12 Ton automatic electric leveling system (Model: HCPSR-6) designed for RVs, motorhomes, and commercial vehicles. Features single leg load capacity of 10 Ton, 400mm stroke, and dual-voltage DC12V/DC24V compatibility.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Henghong"
+    },
+    "model": "HCPSR-6",
+    "url": `${siteConfig.url}/products/hcpsr-6-400`,
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "Henghong Intelligent Equipment",
+        "url": siteConfig.url
+      }
+    },
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Total Load Capacity",
+        "value": "12",
+        "unitText": "Ton"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Single Leg Load Capacity",
+        "value": "10",
+        "unitText": "Ton"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Max Height",
+        "value": "1010",
+        "unitText": "mm"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Stroke Length",
+        "value": "400",
+        "unitText": "mm"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Operating Voltage",
+        "value": "DC12V / DC24V"
+      }
+    ]
+  } : null;
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -110,6 +167,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
   return (
     <div className="bg-white">
       <JsonLd data={productJsonLd} />
+      {hcpsr6JsonLd && <JsonLd data={hcpsr6JsonLd} />}
       <JsonLd data={breadcrumbJsonLd} />
 
       <section className="border-b border-border bg-neutral py-8">
