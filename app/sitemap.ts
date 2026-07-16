@@ -3,7 +3,7 @@ import { allProducts } from "@/.contentlayer/generated";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const products = allProducts.map((product) => ({
-    url: `https://www.henghongrv.com/products/${product._raw.flattenedPath}`,
+    url: `https://www.henghongrv.com${product.url}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
