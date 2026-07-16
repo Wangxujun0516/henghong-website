@@ -49,6 +49,30 @@ export default async function ProductDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  if (product.available === false) {
+    return (
+      <div className="bg-white py-24">
+        <div className="mx-auto max-w-3xl px-4 text-center">
+          <div className="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-accent/10">
+            <svg className="h-10 w-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h1 className="text-3xl font-bold text-primary sm:text-4xl">Product Unavailable</h1>
+          <p className="mt-4 text-lg text-muted">
+            The product you are looking for is currently unavailable.
+          </p>
+          <p className="mt-2 text-muted">
+            Please check back later or contact us for more information.
+          </p>
+          <Button asChild variant="cta" className="mt-8">
+            <Link href="/products">Browse Our Products</Link>
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",

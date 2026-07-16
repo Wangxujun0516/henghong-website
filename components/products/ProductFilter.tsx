@@ -16,17 +16,19 @@ export function ProductFilter({
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
   const filtered = useMemo(() => {
-    if (activeCategory === "All") return products;
-    return products.filter((product) => product.category === activeCategory);
+    const availableProducts = products.filter((product) => product.available !== false);
+    if (activeCategory === "All") return availableProducts;
+    return availableProducts.filter((product) => product.category === activeCategory);
   }, [activeCategory, products]);
 
   // Group products by category for display
   const groupedProducts = useMemo(() => {
     if (activeCategory !== "All") return null;
     
+    const availableProducts = products.filter((product) => product.available !== false);
     const groups: Record<string, Product[]> = {};
     categories.forEach((cat) => {
-      groups[cat] = products.filter((p) => p.category === cat);
+      groups[cat] = availableProducts.filter((p) => p.category === cat);
     });
     return groups;
   }, [activeCategory, categories, products]);

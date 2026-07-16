@@ -44,6 +44,7 @@ export const Product = defineDocumentType(() => ({
     material: { type: "string", required: false },
     accuracy: { type: "string", required: false },
     features: { type: "list", of: { type: "string" }, required: false },
+    available: { type: "boolean", required: false },
   },
   computedFields: {
     url: {
