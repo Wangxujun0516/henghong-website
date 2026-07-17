@@ -8,7 +8,9 @@ const ContactFormSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   company: z.string().optional(),
   country: z.string().optional(),
-  product: z.string().optional(),
+  product: z.array(z.string()).min(1, "Please select at least one product category"),
+  volume: z.string().min(1, "Please select anticipated volume"),
+  shipping: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -22,12 +24,15 @@ export async function submitContactForm(
   prevState: ContactFormState | null,
   formData: FormData,
 ): Promise<ContactFormState> {
+  const productValues = formData.getAll("product") as string[];
   const rawData = {
     name: formData.get("name")?.toString() ?? "",
     email: formData.get("email")?.toString() ?? "",
     company: formData.get("company")?.toString() ?? "",
     country: formData.get("country")?.toString() ?? "",
-    product: formData.get("product")?.toString() ?? "",
+    product: productValues,
+    volume: formData.get("volume")?.toString() ?? "",
+    shipping: formData.get("shipping")?.toString() ?? "",
     message: formData.get("message")?.toString() ?? "",
   };
 
@@ -60,6 +65,20 @@ export async function submitContactForm(
 
   const resend = new Resend(apiKey);
 
+  const productLabels: Record<string, string> = {
+    "automatic-leveling": "Automatic Leveling Systems (HCPSR/HH Series)",
+    "electric-jacks": "Electric Trailer Jacks & Stabilizers",
+    "rv-accessories": "Integrated RV Accessories (Bike Racks/Ladders/Steps)",
+    "oem-odm": "Pure OEM/ODM Private Label Project",
+  };
+  const volumeLabels: Record<string, string> = {
+    "trial": "Trial / Fleet Evaluation (< 50 units)",
+    "wholesale": "Commercial Wholesale / Container Load (50+ units)",
+  };
+
+  const productDisplay = data.product.map(p => productLabels[p] || p).join(", ");
+  const volumeDisplay = volumeLabels[data.volume] || data.volume;
+
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
       <div style="background: #0a2540; color: white; padding: 20px; text-align: center;">
@@ -69,7 +88,7 @@ export async function submitContactForm(
         <h2 style="color: #0a2540; margin-top: 0;">Customer Information</h2>
         <table style="width: 100%; border-collapse: collapse;">
           <tr>
-            <td style="padding: 8px 0; font-weight: bold; color: #0a2540; width: 30%;">Name:</td>
+            <td style="padding: 8px 0; font-weight: bold; color: #0a2540; width: 35%;">Name:</td>
             <td style="padding: 8px 0; color: #2d3748;">${data.name}</td>
           </tr>
           <tr>
@@ -78,7 +97,15 @@ export async function submitContactForm(
           </tr>
           ${data.company ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #0a2540;">Company:</td><td style="padding: 8px 0; color: #2d3748;">${data.company}</td></tr>` : ""}
           ${data.country ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #0a2540;">Country:</td><td style="padding: 8px 0; color: #2d3748;">${data.country}</td></tr>` : ""}
-          ${data.product ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #0a2540;">Product Interest:</td><td style="padding: 8px 0; color: #2d3748;">${data.product}</td></tr>` : ""}
+          <tr>
+            <td style="padding: 8px 0; font-weight: bold; color: #0a2540;">Product Interest:</td>
+            <td style="padding: 8px 0; color: #2d3748;">${productDisplay}</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; font-weight: bold; color: #0a2540;">Anticipated Volume:</td>
+            <td style="padding: 8px 0; color: #2d3748;">${volumeDisplay}</td>
+          </tr>
+          ${data.shipping ? `<tr><td style="padding: 8px 0; font-weight: bold; color: #0a2540;">Shipping Terms:</td><td style="padding: 8px 0; color: #2d3748;">${data.shipping}</td></tr>` : ""}
         </table>
         <h2 style="color: #0a2540;">Message</h2>
         <div style="background: white; padding: 15px; border-left: 4px solid #ff6b35; white-space: pre-wrap;">${data.message}</div>

@@ -121,19 +121,18 @@ export default function ContactPage() {
           </div>
 
           <div id="quote" className="scroll-mt-24 lg:col-span-2">
-            <div className="rounded-lg border border-border bg-white p-6 shadow-sm sm:p-8">
-              <h2 className="text-2xl font-bold text-primary">
-                Request a Quote
-              </h2>
-              <p className="mt-2 text-sm text-muted">
-                Fill out the form below and our Sales Team will get back to you
-                shortly.
-              </p>
-              <div className="mt-6">
-                <ContactForm />
+              <div className="rounded-lg border border-border bg-white p-6 shadow-sm sm:p-8">
+                <h2 className="text-2xl font-bold text-primary">
+                  Request a Quote
+                </h2>
+                <p className="mt-2 text-sm text-muted">
+                  Submit your technical requirements below. Our Engineering Sales Team will review your request and provide a professional quote & lead-time assessment within 12 hours.
+                </p>
+                <div className="mt-6">
+                  <ContactForm />
+                </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
     </div>
