@@ -13,7 +13,7 @@ export const siteConfig = {
   contact: {
     email: "sales@henghongrv.com",
     phone: "+86 153 8400 6618",
-    whatsapp: "+86 153 8400 6618",
+    whatsapp: ["+86 153 8400 6618", "+86 138 7654 4751"],
     address:
       "No. 38, Kenmao Street, Yinong Town, Xiaoshan District, Hangzhou City, Zhejiang Province, China",
     businessHours: "Monday - Friday, 08:00 - 17:30 (Beijing Time)",

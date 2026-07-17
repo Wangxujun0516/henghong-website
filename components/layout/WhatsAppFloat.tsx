@@ -13,14 +13,24 @@ export function WhatsAppFloat() {
         <div className="mb-2 rounded-lg bg-white p-4 shadow-lg">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-semibold text-primary">Quick Contact</p>
-              <p className="mt-1 text-xs text-muted">
-                WhatsApp: {siteConfig.contact.whatsapp}
-              </p>
-              <p className="mt-1 text-xs text-muted">
-                Email: {siteConfig.contact.email}
-              </p>
+            <p className="text-sm font-semibold text-primary">Quick Contact</p>
+            <div className="mt-1 space-y-1">
+              {siteConfig.contact.whatsapp.map((num, index) => (
+                <a
+                  key={index}
+                  href={`https://wa.me/${num.replace(/\D/g, "")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-xs text-muted hover:text-primary"
+                >
+                  WhatsApp: {num}
+                </a>
+              ))}
             </div>
+            <p className="mt-1 text-xs text-muted">
+              Email: {siteConfig.contact.email}
+            </p>
+          </div>
             <button
               onClick={() => setIsOpen(false)}
               className="rounded-full p-1 text-muted hover:text-primary transition-colors"

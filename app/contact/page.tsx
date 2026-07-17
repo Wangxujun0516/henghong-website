@@ -91,15 +91,20 @@ export default function ContactPage() {
 
             <div className="space-y-3 rounded-lg border border-border bg-white p-5">
               <h3 className="font-semibold text-primary">Quick Contact</h3>
-              <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp?.replace(/\D/g, "")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-muted hover:text-accent"
-              >
-                <MessageCircle className="h-4 w-4" />
-                WhatsApp: {siteConfig.contact.whatsapp}
-              </a>
+              <div className="space-y-2">
+                {siteConfig.contact.whatsapp.map((num, index) => (
+                  <a
+                    key={index}
+                    href={`https://wa.me/${num.replace(/\D/g, "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-muted hover:text-accent"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    WhatsApp: {num}
+                  </a>
+                ))}
+              </div>
               <p className="text-xs text-muted">
                 {siteConfig.contact.responseTime}
               </p>

@@ -74,17 +74,20 @@ export function Footer() {
                   {siteConfig.contact.phone}
                 </a>
               </li>
-              {siteConfig.contact.whatsapp && (
-                <li>
-                  WhatsApp:{" "}
-                  <a
-                    href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/\D/g, "")}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white"
-                  >
-                    {siteConfig.contact.whatsapp}
-                  </a>
+              {siteConfig.contact.whatsapp && siteConfig.contact.whatsapp.length > 0 && (
+                <li className="space-y-1">
+                  WhatsApp:
+                  {siteConfig.contact.whatsapp.map((num, index) => (
+                    <a
+                      key={index}
+                      href={`https://wa.me/${num.replace(/\D/g, "")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block hover:text-white"
+                    >
+                      {num}
+                    </a>
+                  ))}
                 </li>
               )}
             </ul>
