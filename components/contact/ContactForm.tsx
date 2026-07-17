@@ -172,7 +172,7 @@ export function ContactForm() {
           >
             <option value="">Select volume</option>
             <option value="trial">
-              Trial / Fleet Evaluation (< 50 units)
+              Trial / Fleet Evaluation (&lt; 50 units)
             </option>
             <option value="wholesale">
               Commercial Wholesale / Container Load (50+ units)
