@@ -86,7 +86,7 @@ export const partners = [
 ];
 
 export const whyChooseUs = [
-  "2222 years of industry experience and 19 years of export expertise",
+  "22+ years of industry experience and 19 years of export expertise",
   "Provincial-level R&D center with 21 professional engineers",
   "Vertically integrated manufacturing with 7 production lines",
   "Strong customization capability for OEM/ODM projects",
