@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { allProducts } from "@/.contentlayer/generated";
+import { allProducts, allBlogs } from "@/.contentlayer/generated";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const products = allProducts.map((product) => ({
@@ -7,6 +7,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
+  }));
+
+  const blogs = allBlogs.map((blog) => ({
+    url: `https://www.henghongrv.com${blog.url}`,
+    lastModified: new Date(blog.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
   }));
 
   const pages = [
@@ -28,5 +35,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: page.priority,
     })),
     ...products,
+    ...blogs,
   ];
 }
