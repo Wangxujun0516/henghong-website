@@ -78,6 +78,13 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       <JsonLd data={organizationJsonLd} />
+      <nav className="border-b border-border bg-neutral/50 px-4 py-3">
+        <div className="mx-auto flex max-w-7xl items-center gap-2 text-sm">
+          <Link href="/" className="text-accent hover:underline">Home</Link>
+          <span className="text-muted">/</span>
+          <span className="text-primary">About</span>
+        </div>
+      </nav>
       {/* Hero Section */}
       <section className="bg-primary py-16 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

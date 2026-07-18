@@ -254,6 +254,39 @@ export default async function ProductDetailPage({ params }: PageProps) {
           <div className="prose-henghong mt-16">
             <MdxContent code={product.body.code} />
           </div>
+
+          {(() => {
+            const allProductsList = getAllProducts();
+            const related = allProductsList
+              .filter((p) => p.slug !== product.slug && p.category === product.category)
+              .slice(0, 3);
+
+            if (related.length === 0) return null;
+
+            return (
+              <div className="mt-16">
+                <h2 className="text-2xl font-bold text-primary">Related Products</h2>
+                <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {related.map((p) => (
+                    <Link key={p.slug} href={p.url} className="group block rounded-xl border border-border bg-neutral p-4 transition-all hover:border-accent hover:shadow-md">
+                      {p.images?.[0] && (
+                        <div className="aspect-video overflow-hidden rounded-lg bg-white">
+                          <img src={p.images[0]} alt={p.title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                        </div>
+                      )}
+                      <p className="mt-3 text-sm font-medium text-accent">{p.category}</p>
+                      <h3 className="mt-1 font-bold text-primary">{p.title}</h3>
+                      {p.model && (
+                        <p className="mt-1 text-sm text-muted">
+                          Model: {p.model}
+                        </p>
+                      )}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
         </div>
       </section>
     </div>

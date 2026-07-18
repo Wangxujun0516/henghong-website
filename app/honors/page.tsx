@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 import { SectionReveal } from "@/components/home/SectionReveal";
 import { honors } from "@/lib/site-config";
@@ -16,6 +17,13 @@ export const metadata: Metadata = {
 export default function HonorsPage() {
   return (
     <div className="bg-neutral">
+      <nav className="border-b border-border bg-white px-4 py-3">
+        <div className="mx-auto flex max-w-7xl items-center gap-2 text-sm">
+          <Link href="/" className="text-accent hover:underline">Home</Link>
+          <span className="text-muted">/</span>
+          <span className="text-primary">Honors</span>
+        </div>
+      </nav>
       <section className="bg-primary py-16 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold sm:text-5xl">
