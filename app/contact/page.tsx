@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Contact Henghong RV Equipment Manufacturer",
     description:
       "Get quotes for RV leveling systems and electric jacks. Contact our sales team for OEM/ODM partnerships and technical support.",
-    images: [{ url: "/images/company/Overview.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/images/factory/factory-complex.jpg", width: 1200, height: 630 }],
   },
 };
 

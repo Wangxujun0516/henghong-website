@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "About Henghong - Intertek Verified RV Equipment Manufacturer",
     description:
       "Learn about Henghong — a leading RV leveling system manufacturer in China. 39,000㎡ Intertek-verified facility, ISO9001:2015, 22+ years OEM/ODM experience.",
-    images: [{ url: "/images/company/Overview.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/images/factory/factory-complex.jpg", width: 1200, height: 630 }],
   },
 };
 

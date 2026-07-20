@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: "RV Leveling Systems & Electric Jacks OEM Manufacturer",
     description: "Factory-direct RV leveling systems, Intertek verified, 22+ years experience.",
-    images: [{ url: "/images/company/Overview.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/images/factory/factory-complex.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["/images/company/Overview.jpg"],
+    images: ["/images/factory/factory-complex.jpg"],
   },
   robots: {
     index: true,

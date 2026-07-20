@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "RV Leveling Systems & Electric Jacks Manufacturer | Henghong OEM/ODM",
     description:
       "Professional RV leveling systems, electric jacks, stabilizers, and automatic leveling systems manufacturer. Intertek verified, 22+ years experience, OEM/ODM ready.",
-    images: [{ url: "/images/company/Overview.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/images/factory/factory-complex.jpg", width: 1200, height: 630 }],
   },
 };
 
