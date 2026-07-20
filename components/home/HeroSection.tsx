@@ -1,23 +1,45 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 
+const heroImages = [
+  { src: "/images/factory/factory-complex.jpg", alt: "Henghong factory complex - 39,000㎡ facility" },
+  { src: "/images/factory/showroom.jpg", alt: "Henghong product showroom" },
+  { src: "/images/factory/workshop.jpg", alt: "Henghong CNC workshop and production line" },
+];
+
 export function HeroSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#0F172A] text-white">
       <div className="absolute inset-0">
-        <Image
-          src="/images/company/Overview.jpg"
-          alt="Henghong manufacturing facility"
-          fill
-          priority
-          className="object-cover opacity-40"
-          sizes="100vw"
-        />
+        {heroImages.map((image, index) => (
+          <Image
+            key={image.src}
+            src={image.src}
+            alt={image.alt}
+            fill
+            priority={index === 0}
+            className={`absolute inset-0 object-cover transition-opacity duration-1000 ${
+              index === currentIndex ? "opacity-40" : "opacity-0"
+            }`}
+            sizes="100vw"
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E3A5F]/95 to-[#0F172A]/80" />
       </div>
 
@@ -80,12 +102,18 @@ export function HeroSection() {
             className="hidden flex-1 lg:block"
           >
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/company/Overview.jpg"
-                alt="Henghong factory"
-                fill
-                className="object-cover"
-              />
+              {heroImages.map((image, index) => (
+                <Image
+                  key={image.src}
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  priority={index === 0}
+                  className={`absolute inset-0 object-cover transition-opacity duration-1000 ${
+                    index === currentIndex ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 to-transparent" />
             </div>
           </motion.div>
