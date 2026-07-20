@@ -30,8 +30,8 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="mt-1 text-sm text-muted">Model: {product.model}</p>
         )}
 
-        {/* Spec tags row */}
-        <div className="mt-3 flex flex-wrap gap-2">
+        {/* Spec tags - Desktop layout */}
+        <div className="hidden sm:flex mt-3 flex-wrap gap-2">
           {product.voltage && (
             <span className="inline-flex items-center rounded-md bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
               {product.voltage}
@@ -51,6 +51,40 @@ export function ProductCard({ product }: { product: Product }) {
             <span className="inline-flex items-center rounded-md bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
               {product.material}
             </span>
+          )}
+        </div>
+
+        {/* Spec tags - Mobile layout with icons */}
+        <div className="sm:hidden mt-3 grid grid-cols-2 gap-2 text-xs">
+          {product.voltage && (
+            <div className="flex items-center gap-1.5 rounded-md bg-accent/10 px-2 py-1">
+              <span className="text-accent">⚡</span>
+              <span className="font-medium text-accent">{product.voltage}</span>
+            </div>
+          )}
+          {product.capacity?.system && (
+            <div className="flex items-center gap-1.5 rounded-md bg-accent/10 px-2 py-1">
+              <span className="text-accent">⚖️</span>
+              <span className="font-medium text-accent">{product.capacity.system}</span>
+            </div>
+          )}
+          {product.stroke && (
+            <div className="flex items-center gap-1.5 rounded-md bg-accent/10 px-2 py-1">
+              <span className="text-accent">📏</span>
+              <span className="font-medium text-accent">{product.stroke}</span>
+            </div>
+          )}
+          {product.material && (
+            <div className="flex items-center gap-1.5 rounded-md bg-accent/10 px-2 py-1">
+              <span className="text-accent">🔧</span>
+              <span className="font-medium text-accent">{product.material}</span>
+            </div>
+          )}
+          {product.power && (
+            <div className="flex items-center gap-1.5 rounded-md bg-accent/10 px-2 py-1">
+              <span className="text-accent">🔋</span>
+              <span className="font-medium text-accent">{product.power}</span>
+            </div>
           )}
         </div>
 
