@@ -34,11 +34,13 @@ export function Navbar() {
     return pathname.startsWith(href);
   };
 
+  const isHomePage = pathname === "/";
+
   return (
     <header
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-300 ease-in-out",
-        scrolled
+        scrolled || !isHomePage
           ? "bg-white/95 shadow-md backdrop-blur-md"
           : "bg-transparent",
       )}
@@ -55,7 +57,7 @@ export function Navbar() {
           />
           <span className={cn(
             "hidden text-xs font-medium uppercase tracking-wider sm:block",
-            scrolled ? "text-muted" : "text-white/70",
+            scrolled || !isHomePage ? "text-muted" : "text-white/70",
           )}>
             RV Intelligent Equipment
           </span>
@@ -68,7 +70,7 @@ export function Navbar() {
                 <div key={item.label} className="relative group">
                   <button className={cn(
                     "text-xs font-medium uppercase tracking-wide transition-colors flex items-center gap-1",
-                    scrolled
+                    scrolled || !isHomePage
                       ? "text-primary/80 hover:text-accent"
                       : "text-white/80 hover:text-white",
                   )}>
@@ -100,7 +102,7 @@ export function Navbar() {
                 href={item.href!}
                 className={cn(
                   "text-xs font-medium uppercase tracking-wide transition-colors relative",
-                  scrolled
+                  scrolled || !isHomePage
                     ? active
                       ? "text-accent"
                       : "text-primary/80 hover:text-accent"
@@ -134,7 +136,7 @@ export function Navbar() {
                 size="icon"
                 className={cn(
                   "md:hidden",
-                  scrolled ? "text-primary" : "text-white",
+                  scrolled || !isHomePage ? "text-primary" : "text-white",
                 )}
                 aria-label="Open menu"
               >
