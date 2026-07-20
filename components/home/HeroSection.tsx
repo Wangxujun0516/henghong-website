@@ -57,7 +57,7 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="max-w-3xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl"
             >
-              Professional RV Automatic Leveling Systems & Electric Jacks Manufacturer
+              Reliable RV Leveling System Manufacturer for Global RV Brands
             </motion.h1>
             
             <motion.p
@@ -66,8 +66,28 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="max-w-2xl text-lg text-gray-400 sm:text-xl"
             >
-              Intertek Verified · 22+ Years Experience · OEM/ODM Ready · Exporting to 40+ Countries
+              20+ years manufacturing experience | OEM/ODM custom solutions | CE & ISO9001 compliant | Exporting to 40+ countries
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="grid grid-cols-3 gap-4 py-4"
+            >
+              <div className="flex flex-col items-center text-center">
+                <span className="text-3xl font-bold text-[#FF6B35]">50,000+</span>
+                <span className="text-sm text-gray-400 mt-1">Systems/Year</span>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <span className="text-3xl font-bold text-[#FF6B35]">30-Day</span>
+                <span className="text-sm text-gray-400 mt-1">OEM Delivery</span>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <span className="text-3xl font-bold text-[#FF6B35]">39,000㎡</span>
+                <span className="text-sm text-gray-400 mt-1">Factory Layout</span>
+              </div>
+            </motion.div>
             
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -82,7 +102,7 @@ export function HeroSection() {
                 className="w-full text-lg sm:w-auto"
                 style={{ backgroundColor: "#FF6B35", borderColor: "#FF6B35" }}
               >
-                <Link href="/contact">Request a Quote</Link>
+                <Link href="/contact">Request OEM Quote</Link>
               </Button>
               <Button
                 asChild
@@ -90,7 +110,7 @@ export function HeroSection() {
                 size="lg"
                 className="w-full border-white text-white hover:bg-white hover:text-primary text-lg sm:w-auto"
               >
-                <Link href="/products">View All Products</Link>
+                <Link href="/products">Download 2026 Catalog (PDF)</Link>
               </Button>
             </motion.div>
           </motion.div>
