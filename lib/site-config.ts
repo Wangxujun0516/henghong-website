@@ -21,17 +21,34 @@ export const siteConfig = {
   },
   nav: [
     { label: "Home", href: "/" },
-    { label: "Products", href: "/products" },
+    { 
+      label: "Products",
+      children: [
+        { label: "RV Automatic Leveling Systems", href: "/products?category=Automatic+Leveling+Systems" },
+        { label: "Electric Trailer Jacks", href: "/products?category=Electric+Trailer+Jacks" },
+        { label: "Hydraulic Leveling Systems", href: "/products?category=Electric+Hydraulic" },
+      ],
+    },
+    { 
+      label: "Solutions",
+      children: [
+        { label: "Travel Trailer", href: "/products?category=Automatic+Leveling+Systems" },
+        { label: "Fifth Wheel", href: "/products?category=Automatic+Leveling+Systems" },
+        { label: "Motorhome", href: "/products?category=Electric+Hydraulic" },
+      ],
+    },
+    { label: "OEM/ODM", href: "/contact" },
+    { label: "Factory & QC", href: "/about" },
+    { label: "Case Studies", href: "/blog" },
     { 
       label: "Resources",
       children: [
-        { label: "Technical Resources", href: "/technical-resources" },
+        { label: "Catalog", href: "/products" },
+        { label: "Installation Manual", href: "/technical-resources" },
         { label: "Blog", href: "/blog" },
       ],
     },
-    { label: "About", href: "/about" },
-    { label: "Honors", href: "/honors" },
-    { label: "Contact", href: "/contact" },
+    { label: "Contact Us", href: "/contact" },
   ],
   stats: [
     { label: "Years Experience", value: "22+" },

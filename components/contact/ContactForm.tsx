@@ -15,7 +15,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" variant="cta" size="lg" disabled={pending}>
-      {pending ? "Sending..." : "Request Factory-Direct Quote"}
+      {pending ? "Sending..." : "Request OEM Quote"}
     </Button>
   );
 }
@@ -59,20 +59,21 @@ export function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label
-            htmlFor="name"
+            htmlFor="company"
             className="block text-sm font-medium text-primary"
           >
-            Name *
+            Company Name *
           </label>
           <input
-            id="name"
-            name="name"
+            id="company"
+            name="company"
             type="text"
             required
+            placeholder="Enter your company name"
             className="mt-1 w-full rounded-md border border-border px-3 py-2 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
           />
-          {state.errors?.name && (
-            <p className="mt-1 text-xs text-cta">{state.errors.name}</p>
+          {state.errors?.company && (
+            <p className="mt-1 text-xs text-cta">{state.errors.company}</p>
           )}
         </div>
         <div>
@@ -80,15 +81,17 @@ export function ContactForm() {
             htmlFor="email"
             className="block text-sm font-medium text-primary"
           >
-            Email *
+            Business Email *
           </label>
           <input
             id="email"
             name="email"
             type="email"
             required
+            placeholder="prefer corporate email (e.g., name@company.com)"
             className="mt-1 w-full rounded-md border border-border px-3 py-2 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
           />
+          <p className="mt-1 text-xs text-muted">Suggested: Use corporate email for faster response</p>
           {state.errors?.email && (
             <p className="mt-1 text-xs text-cta">{state.errors.email}</p>
           )}
@@ -98,108 +101,85 @@ export function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label
-            htmlFor="company"
-            className="block text-sm font-medium text-primary"
-          >
-            Company
-          </label>
-          <input
-            id="company"
-            name="company"
-            type="text"
-            className="mt-1 w-full rounded-md border border-border px-3 py-2 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-          />
-        </div>
-        <div>
-          <label
             htmlFor="country"
             className="block text-sm font-medium text-primary"
           >
-            Country
+            Country/Region *
           </label>
-          <input
+          <select
             id="country"
             name="country"
-            type="text"
+            required
             className="mt-1 w-full rounded-md border border-border px-3 py-2 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-          />
+          >
+            <option value="">Select country/region</option>
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="germany">Germany</option>
+            <option value="france">France</option>
+            <option value="italy">Italy</option>
+            <option value="spain">Spain</option>
+            <option value="netherlands">Netherlands</option>
+            <option value="australia">Australia</option>
+            <option value="newzealand">New Zealand</option>
+            <option value="japan">Japan</option>
+            <option value="southkorea">South Korea</option>
+            <option value="other">Other</option>
+          </select>
+          {state.errors?.country && (
+            <p className="mt-1 text-xs text-cta">{state.errors.country}</p>
+          )}
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-primary">
+            Product Interested *
+          </label>
+          <div className="mt-2">
+            <select
+              id="product"
+              name="product"
+              required
+              className="mt-1 w-full rounded-md border border-border px-3 py-2 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+            >
+              <option value="">Select product category</option>
+              <option value="6t-system">6T Leveling System (HCPTR-3)</option>
+              <option value="12t-system">12T Leveling System (DC12V 4-Leg)</option>
+              <option value="jacks">Electric Trailer Jacks (HH-2000/HH-3500/HH-7500)</option>
+              <option value="stabilizers">Stabilizer Jacks (HH-400/HCPSR Series)</option>
+              <option value="oem-odm">OEM/ODM Custom Project</option>
+            </select>
+          </div>
+          {state.errors?.product && (
+            <p className="mt-1 text-xs text-cta">{state.errors.product}</p>
+          )}
         </div>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-primary">
-          Product Interest *
+        <label
+          htmlFor="quantity"
+          className="block text-sm font-medium text-primary"
+        >
+          Estimated Annual Sourcing Quantity *
         </label>
-        <div className="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
-          {[
-            { value: "automatic-leveling", label: "Automatic Leveling Systems (HCPSR/HH Series)" },
-            { value: "electric-jacks", label: "Electric Trailer Jacks & Stabilizers" },
-            { value: "rv-accessories", label: "Integrated RV Accessories (Bike Racks/Ladders/Steps)" },
-            { value: "oem-odm", label: "Pure OEM/ODM Private Label Project" },
-          ].map((option) => (
-            <label
-              key={option.value}
-              className="flex items-center gap-3 rounded-md border border-border px-4 py-3 cursor-pointer hover:border-accent hover:bg-accent/5 transition-colors"
-            >
-              <input
-                type="checkbox"
-                name="product"
-                value={option.value}
-                className="h-4 w-4 rounded border-border text-accent focus:ring-accent"
-              />
-              <span className="text-sm text-gray-700">{option.label}</span>
-            </label>
-          ))}
-        </div>
-        {state.errors?.product && (
-          <p className="mt-1 text-xs text-cta">{state.errors.product}</p>
-        )}
-      </div>
-
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div>
-          <label
-            htmlFor="volume"
-            className="block text-sm font-medium text-primary"
-          >
-            Anticipated Initial Volume *
-          </label>
+        <div className="mt-2">
           <select
-            id="volume"
-            name="volume"
+            id="quantity"
+            name="quantity"
             required
-            className="mt-1 w-full rounded-md border border-border px-3 py-2 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+            className="w-full rounded-md border border-border px-3 py-2 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
           >
-            <option value="">Select volume</option>
-            <option value="trial">
-              Trial / Fleet Evaluation (&lt; 50 units)
-            </option>
-            <option value="wholesale">
-              Commercial Wholesale / Container Load (50+ units)
-            </option>
-          </select>
-          {state.errors?.volume && (
-            <p className="mt-1 text-xs text-cta">{state.errors.volume}</p>
-          )}
-        </div>
-        <div>
-          <label
-            htmlFor="shipping"
-            className="block text-sm font-medium text-primary"
-          >
-            Preferred Shipping Terms
-          </label>
-          <select
-            id="shipping"
-            name="shipping"
-            className="mt-1 w-full rounded-md border border-border px-3 py-2 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-          >
-            <option value="">Select shipping terms</option>
-            <option value="FOB">FOB</option>
-            <option value="CIF">CIF</option>
-            <option value="EXW">EXW</option>
+            <option value="">Select annual quantity</option>
+            <option value="less-100">&lt; 100 pcs / year</option>
+            <option value="100-500">100 - 500 pcs / year</option>
+            <option value="500-2000">500 - 2000 pcs / year</option>
+            <option value="2000-plus">2000+ pcs / year</option>
           </select>
         </div>
+        {state.errors?.quantity && (
+          <p className="mt-1 text-xs text-cta">{state.errors.quantity}</p>
+        )}
       </div>
 
       <div>
@@ -207,15 +187,14 @@ export function ContactForm() {
           htmlFor="message"
           className="block text-sm font-medium text-primary"
         >
-          Message *
+          Technical Message / Requirements
         </label>
         <textarea
           id="message"
           name="message"
-          required
-          rows={5}
+          rows={4}
           className="mt-1 w-full rounded-md border border-border px-3 py-2 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-          placeholder="Please include preferred voltage (12V/24V), dimensions, or custom specifications here..."
+          placeholder="Please specify: vehicle type (Travel Trailer/Fifth Wheel/Motorhome), voltage preference (12V/24V), specific specs, or custom requirements..."
         />
         {state.errors?.message && (
           <p className="mt-1 text-xs text-cta">{state.errors.message}</p>
