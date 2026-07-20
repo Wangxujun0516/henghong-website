@@ -90,35 +90,6 @@ export function HeroSection() {
             </div>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
-        >
-          {[
-            { value: "22+", label: "Years Experience" },
-            { value: "39,000", label: "㎡ Modern Factory" },
-            { value: "Intertek", label: "Verified Supplier" },
-            { value: "21", label: "R&D Engineers" },
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 text-center"
-            >
-              <p className="text-3xl font-bold text-[#FF6B35] sm:text-4xl">
-                {stat.value}
-              </p>
-              <p className="mt-2 text-sm text-gray-400">{stat.label}</p>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
