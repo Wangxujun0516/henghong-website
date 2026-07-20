@@ -21,7 +21,7 @@ function AnimatedNumber({ value }: { value: string }) {
     if (!isInView) return;
 
     const numericPart = value.replace(/[^0-9]/g, "");
-    const suffix = value.replace(/[0-9]/g, "");
+    const suffix = value.replace(/[0-9,]/g, "");
     const targetNum = parseInt(numericPart, 10);
     
     if (isNaN(targetNum)) {
@@ -37,7 +37,7 @@ function AnimatedNumber({ value }: { value: string }) {
       const progress = Math.min((timestamp - startTime) / 1500, 1);
       const easeOut = 1 - Math.pow(1 - progress, 3);
       const currentNum = Math.floor(easeOut * targetNum);
-      setDisplayValue(currentNum + suffix);
+      setDisplayValue(currentNum.toLocaleString() + suffix);
 
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
