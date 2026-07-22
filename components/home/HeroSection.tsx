@@ -60,7 +60,7 @@ export function HeroSection() {
             poster="/videos/hero-loop-poster.jpg"
             preload="metadata"
             disablePictureInPicture
-            style={{ opacity: isVisible ? 0.6 : 0, transition: "opacity 1s ease-out" }}
+            style={{ opacity: isVisible ? 0.85 : 0, transition: "opacity 1s ease-out" }}
           >
             <source
               src="/videos/hero-loop.mp4"
@@ -75,8 +75,8 @@ export function HeroSection() {
           </video>
         )}
         
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628] via-[#0A1628]/85 to-[#0A1628]/70" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/90 via-[#0A1628]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628]/50 via-[#0A1628]/35 to-[#0A1628]/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/50 via-[#0A1628]/25 to-transparent" />
         
         {dataSaverMode && (
           <div 
