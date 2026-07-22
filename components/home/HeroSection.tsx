@@ -62,16 +62,7 @@ export function HeroSection() {
             disablePictureInPicture
             style={{ opacity: isVisible ? 0.75 : 0, transition: "opacity 1s ease-out" }}
           >
-            <source
-              src="/videos/hero-loop.mp4"
-              type="video/mp4"
-              media="(min-width: 768px)"
-            />
-            <source
-              src="/videos/hero-loop.mp4"
-              type="video/mp4"
-              media="(max-width: 767px)"
-            />
+            <source src="/videos/henghong.mp4" type="video/mp4" />
           </video>
         )}
         
@@ -97,10 +88,20 @@ export function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex flex-col gap-6 max-w-3xl"
           >
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
+              className="inline-flex items-center gap-2 rounded-full bg-[#FF6B35]/20 px-4 py-1.5 text-sm font-medium text-[#FF6B35]"
+            >
+              <span className="flex h-2 w-2 animate-pulse rounded-full bg-[#FF6B35]" />
+              Intertek Verified Manufacturer
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.15 }}
               className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl xl:text-7xl"
             >
               Reliable RV Electric Jack &

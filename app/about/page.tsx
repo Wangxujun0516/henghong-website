@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { CtaSection } from "@/components/home/CtaSection";
+import { CTASection } from "@/components/home/CTASection";
 import { Factory, Users, Award, Shield, Cog, FileCheck, BadgeCheck } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site-config";
@@ -222,7 +222,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <CtaSection />
+      <CTASection />
     </div>
   );
 }
