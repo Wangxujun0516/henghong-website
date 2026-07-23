@@ -1,5 +1,6 @@
-"use client";
+﻿"use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Globe, TrendingUp, Users, MapPin } from "lucide-react";
 
@@ -7,7 +8,7 @@ const regions = [
   { name: "North America", countries: "USA, Canada, Mexico", percent: 45, color: "bg-blue-500" },
   { name: "Europe", countries: "Germany, UK, France, Italy", percent: 30, color: "bg-green-500" },
   { name: "Asia Pacific", countries: "Australia, Japan, South Korea", percent: 15, color: "bg-orange-500" },
-  { name: "Others", countries: "Middle East, South America", percent: 10, color: "bg-purple-500" },
+  { name: "Middle East & South America", countries: "UAE, Brazil, Chile", percent: 10, color: "bg-purple-500" },
 ];
 
 const partners = [
@@ -19,8 +20,13 @@ const partners = [
 
 export function GlobalMarket() {
   return (
-    <section className="bg-neutral py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-white py-20 sm:py-28">
+      {/* Background from video - wide factory / global market view */}
+      <div className="absolute inset-0">
+        <Image src="/images/video-frames/section-global.jpg" alt="Global manufacturing facility" fill className="object-cover opacity-[0.03]" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,14 +34,14 @@ export function GlobalMarket() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <span className="inline-block rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
+          <span className="inline-block rounded-full bg-accent/10 border border-accent/20 px-4 py-1.5 text-sm font-medium text-accent">
             Global Reach
           </span>
-          <h2 className="mt-4 text-3xl font-bold text-primary sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold text-primary sm:text-4xl lg:text-5xl tracking-tight">
             Trusted by RV Brands Worldwide
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
-            Exporting to 40+ countries with established partnerships and distribution networks
+            Exporting to 40+ countries with established partnerships and distribution networks across four continents
           </p>
         </motion.div>
 
@@ -45,7 +51,7 @@ export function GlobalMarket() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-2xl bg-white p-6 shadow-sm"
+            className="rounded-2xl border border-border bg-white p-6 shadow-sm"
           >
             <div className="flex items-center gap-3">
               <Globe className="h-6 w-6 text-primary" />
@@ -87,7 +93,7 @@ export function GlobalMarket() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="rounded-2xl bg-white p-6 shadow-sm"
+            className="rounded-2xl border border-border bg-white p-6 shadow-sm"
           >
             <div className="flex items-center gap-3">
               <Users className="h-6 w-6 text-primary" />
@@ -119,12 +125,12 @@ export function GlobalMarket() {
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-4">
-              <div className="rounded-xl bg-[#FF6B35]/5 p-4 text-center">
+              <div className="rounded-xl bg-[#FF6B35]/5 border border-[#FF6B35]/10 p-4 text-center">
                 <TrendingUp className="mx-auto h-6 w-6 text-[#FF6B35]" />
                 <div className="mt-2 text-2xl font-bold text-primary">40+</div>
                 <p className="text-xs text-muted">Countries</p>
               </div>
-              <div className="rounded-xl bg-[#FF6B35]/5 p-4 text-center">
+              <div className="rounded-xl bg-[#FF6B35]/5 border border-[#FF6B35]/10 p-4 text-center">
                 <Globe className="mx-auto h-6 w-6 text-[#FF6B35]" />
                 <div className="mt-2 text-2xl font-bold text-primary">22+</div>
                 <p className="text-xs text-muted">Years Export</p>

@@ -1,14 +1,18 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Mail, Phone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#0A1628] via-[#1E3A5F] to-[#0A1628] py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-[#0A1628] py-20 sm:py-28">
+      {/* Background from video - team/inspiring factory scene */}
       <div className="absolute inset-0">
+        <Image src="/images/video-frames/section-cta.jpg" alt="Henghong team and facility" fill className="object-cover opacity-25" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628]/80 via-[#0A1628]/70 to-[#0A1628]/60" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 h-full w-full bg-[radial-gradient(circle_at_20%_50%,#FF6B35_0%,transparent_50%)]" />
           <div className="absolute bottom-0 right-0 h-full w-full bg-[radial-gradient(circle_at_80%_50%,#FF6B35_0%,transparent_50%)]" />
@@ -23,14 +27,14 @@ export function CTASection() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <span className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white">
+          <span className="inline-block rounded-full bg-white/10 border border-white/20 px-4 py-1.5 text-sm font-medium text-white">
             Ready to Partner
           </span>
-          <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl xl:text-6xl">
+          <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
             Start Your OEM Journey Today
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-300">
-            Whether you need custom leveling systems, private labeling, or technical support, our team is ready to assist
+            Whether you need custom leveling systems, private labeling, or technical support — our engineering team is ready to discuss your requirements
           </p>
 
           <motion.div
@@ -42,10 +46,9 @@ export function CTASection() {
           >
             <Button
               asChild
-              variant="cta"
               size="lg"
-              className="group text-base font-semibold"
-              style={{ backgroundColor: "#FF6B35", borderColor: "#FF6B35", padding: "14px 40px" }}
+              className="group text-base font-semibold bg-[#FF6B35] hover:bg-[#FF5A20] text-white border-0 shadow-lg shadow-[#FF6B35]/20"
+              style={{ padding: "14px 40px" }}
             >
               <Link href="/contact">
                 Request OEM Quote
@@ -60,7 +63,7 @@ export function CTASection() {
               style={{ padding: "14px 40px" }}
             >
               <Link href="/documents/Catalog.pdf" target="_blank">
-                Download Catalog
+                Download Product Catalog
               </Link>
             </Button>
           </motion.div>
@@ -70,18 +73,18 @@ export function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-12 flex flex-col items-center gap-4 sm:flex-row"
+            className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
           >
             <a
               href="mailto:sales@henghongrv.com"
-              className="flex items-center gap-3 rounded-full bg-white/10 px-5 py-3 text-white hover:bg-white/20 transition-colors"
+              className="flex items-center gap-3 rounded-full bg-white/10 border border-white/10 px-5 py-3 text-white hover:bg-white/20 transition-colors"
             >
               <Mail className="h-5 w-5" />
               <span className="text-sm font-medium">sales@henghongrv.com</span>
             </a>
             <a
               href="tel:+8615384006618"
-              className="flex items-center gap-3 rounded-full bg-white/10 px-5 py-3 text-white hover:bg-white/20 transition-colors"
+              className="flex items-center gap-3 rounded-full bg-white/10 border border-white/10 px-5 py-3 text-white hover:bg-white/20 transition-colors"
             >
               <Phone className="h-5 w-5" />
               <span className="text-sm font-medium">+86 153 8400 6618</span>

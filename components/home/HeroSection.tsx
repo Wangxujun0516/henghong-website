@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -57,30 +57,30 @@ export function HeroSection() {
             muted
             loop
             playsInline
-            poster="/videos/hero-loop-poster.jpg"
+            poster="/images/video-frames/section-stats.jpg"
             preload="metadata"
             disablePictureInPicture
-            style={{ opacity: isVisible ? 0.75 : 0, transition: "opacity 1s ease-out" }}
+            style={{ opacity: isVisible ? 0.8 : 0, transition: "opacity 1s ease-out" }}
           >
             <source src="/videos/henghong.mp4" type="video/mp4" />
           </video>
         )}
         
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628]/60 via-[#0A1628]/45 to-[#0A1628]/30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/60 via-[#0A1628]/35 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628]/70 via-[#0A1628]/50 to-[#0A1628]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/60 via-[#0A1628]/30 to-transparent" />
         
         {dataSaverMode && (
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
-              backgroundImage: `url(/videos/hero-loop-poster.jpg)`,
+              backgroundImage: `url(/images/video-frames/section-stats.jpg)`,
               opacity: 0.4
             }}
           />
         )}
       </div>
 
-      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
+      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 py-20 sm:px-8 sm:py-28 lg:px-12 lg:py-32">
         <div className="flex flex-1 flex-col justify-center gap-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -92,37 +92,32 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="inline-flex items-center gap-2 rounded-full bg-[#FF6B35]/20 px-4 py-1.5 text-sm font-medium text-[#FF6B35]"
+              className="inline-flex items-center gap-2 rounded-full bg-[#FF6B35]/20 border border-[#FF6B35]/30 px-4 py-1.5 text-sm font-medium text-[#FF6B35]"
             >
               <span className="flex h-2 w-2 animate-pulse rounded-full bg-[#FF6B35]" />
-              Intertek Verified Manufacturer
+              22 Years OEM Experience · Intertek Verified · CE Certified
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl xl:text-7xl"
+              className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
             >
-              Reliable RV Electric Jack &
-              <br />
-              Leveling System Manufacturer
+              Reliable RV Leveling Solutions<br />
+              for Global RV Manufacturers
             </motion.h1>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-3"
+              className="max-w-2xl"
             >
-              <p className="text-lg text-gray-300 sm:text-xl">
-                22 Years Manufacturing Experience
-              </p>
-              <p className="text-lg text-gray-300 sm:text-xl">
-                100,000+ Units Annual Production
-              </p>
-              <p className="text-lg text-gray-400 sm:text-xl">
-                OEM / ODM Solutions for Global RV Brands
+              <p className="text-base text-gray-300 sm:text-lg leading-relaxed">
+                Since 2004, Henghong has been the OEM partner of choice for RV manufacturers worldwide. 
+                Our 39,000 m² Intertek-verified facility with 21 R&amp;D engineers delivers 
+                100,000+ units annually — ISO 9001:2015, CE certified, and customized to your specifications.
               </p>
             </motion.div>
 
@@ -130,31 +125,31 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="grid grid-cols-2 gap-4 py-6"
+              className="grid grid-cols-2 gap-x-8 gap-y-3 py-6 max-w-lg"
             >
               <div className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FF6B35]/20 text-[#FF6B35] text-sm font-bold">
-                  ✔
-                </span>
-                <span className="text-sm text-gray-300 font-medium">22 Years Experience</span>
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FF6B35]/20">
+                  <svg className="h-4 w-4 text-[#FF6B35]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <span className="text-sm text-gray-300 font-medium">OEM/ODM Custom Design</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FF6B35]/20 text-[#FF6B35] text-sm font-bold">
-                  ✔
-                </span>
-                <span className="text-sm text-gray-300 font-medium">39,000㎡ Factory</span>
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FF6B35]/20">
+                  <svg className="h-4 w-4 text-[#FF6B35]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <span className="text-sm text-gray-300 font-medium">Prototype in 90 Days</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FF6B35]/20 text-[#FF6B35] text-sm font-bold">
-                  ✔
-                </span>
-                <span className="text-sm text-gray-300 font-medium">100,000+ Annual Capacity</span>
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FF6B35]/20">
+                  <svg className="h-4 w-4 text-[#FF6B35]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <span className="text-sm text-gray-300 font-medium">Low MOQ (100 pcs)</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FF6B35]/20 text-[#FF6B35] text-sm font-bold">
-                  ✔
-                </span>
-                <span className="text-sm text-gray-300 font-medium">OEM / ODM</span>
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FF6B35]/20">
+                  <svg className="h-4 w-4 text-[#FF6B35]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <span className="text-sm text-gray-300 font-medium">After-Sales Support</span>
               </div>
             </motion.div>
 
@@ -162,14 +157,13 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col gap-4 sm:flex-row"
+              className="flex flex-col gap-4 sm:flex-row pt-2"
             >
               <Button
                 asChild
-                variant="cta"
                 size="lg"
-                className="w-full text-base font-semibold sm:w-auto"
-                style={{ backgroundColor: "#FF6B35", borderColor: "#FF6B35", padding: "14px 32px" }}
+                className="w-full text-base font-semibold sm:w-auto bg-[#FF6B35] hover:bg-[#FF5A20] text-white border-0 shadow-lg shadow-[#FF6B35]/20"
+                style={{ padding: "14px 32px" }}
               >
                 <Link href="/contact">Request OEM Quote</Link>
               </Button>
@@ -177,11 +171,11 @@ export function HeroSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="w-full border-white/60 text-white hover:bg-white/10 hover:text-white text-base font-semibold sm:w-auto"
+                className="w-full border-white/40 text-white hover:bg-white/10 hover:text-white text-base font-semibold sm:w-auto"
                 style={{ padding: "14px 32px" }}
               >
                 <Link href="/documents/Catalog.pdf" target="_blank" rel="noopener noreferrer">
-                  Download Catalog
+                  Download Product Catalog
                 </Link>
               </Button>
             </motion.div>

@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { CTASection } from "@/components/home/CTASection";
 import { GlobalMarket } from "@/components/home/GlobalMarket";
 import { HeroSection } from "@/components/home/HeroSection";
+import { WhyChooseUs } from "@/components/home/WhyChooseUs";
+import { SolutionsByRvType } from "@/components/home/SolutionsByRvType";
 import { ManufacturingProcess } from "@/components/home/ManufacturingProcess";
 import { ManufacturingStatistics } from "@/components/home/ManufacturingStatistics";
 import { OEMCapability } from "@/components/home/OEMCapability";
 import { ProductCategories } from "@/components/home/ProductCategories";
 import { QualityControl } from "@/components/home/QualityControl";
-import { TrustBar } from "@/components/home/TrustBar";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site-config";
 
@@ -42,8 +43,10 @@ export default function HomePage() {
     <>
       <JsonLd data={organizationJsonLd} />
       <HeroSection />
+      <WhyChooseUs />
       <ManufacturingStatistics />
       <ProductCategories />
+      <SolutionsByRvType />
       <OEMCapability />
       <ManufacturingProcess />
       <QualityControl />

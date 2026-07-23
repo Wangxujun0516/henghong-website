@@ -19,10 +19,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "RV Leveling Systems & Electric Jacks Manufacturer | Henghong OEM/ODM",
-    template: "%s | Henghong Intelligent Equipment",
+    default: "RV Leveling System OEM Manufacturer | Custom Design, Low MOQ, Fast Prototype",
+    template: "%s | Henghong RV Leveling Systems",
   },
-  description: "Intertek verified manufacturer of automatic RV leveling systems and electric jacks. 22+ years, 39,000㎡ factory, OEM/ODM. Serving 40+ countries. Competitive factory-direct pricing.",
+  description: "OEM/ODM RV leveling systems and electric jacks since 2004. Intertek verified facility with 21 R&amp;D engineers. 90-day prototype, MOQ as low as 100 pcs, CE certified. Request a quote today.",
   keywords: [
     "RV leveling system",
     "electric jack",
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "RV Leveling Systems & Electric Jacks OEM Manufacturer",
-    description: "Factory-direct RV leveling systems, Intertek verified, 22+ years experience.",
+    title: "RV Leveling System OEM Manufacturer | Custom Design, Low MOQ",
+    description: "OEM/ODM RV leveling systems since 2004. 21 R&amp;D engineers, 90-day prototype, MOQ 100 pcs. Intertek verified, CE certified.",
     images: [{ url: "/images/factory/factory-complex.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
-    description: siteConfig.description,
+    description: "OEM/ODM RV leveling systems and electric jacks. Intertek verified, 90-day prototype, low MOQ.",
     images: ["/images/factory/factory-complex.jpg"],
   },
   robots: {

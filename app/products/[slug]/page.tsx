@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import { ProductGallery } from "@/components/products/ProductGallery";
@@ -327,6 +328,29 @@ export default async function ProductDetailPage({ params }: PageProps) {
             <MdxContent code={product.body.code} />
           </div>
 
+          <div className="mt-16 rounded-2xl border border-accent/20 bg-accent/[0.03] p-8 sm:p-12 text-center">
+            <span className="inline-block rounded-full bg-accent/10 border border-accent/20 px-4 py-1.5 text-sm font-medium text-accent">
+              OEM / Custom Design
+            </span>
+            <h2 className="mt-4 text-2xl font-bold text-primary sm:text-3xl">
+              Need a Custom Solution for Your RV Platform?
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-muted">
+              Our engineering team can customize this product to your specifications — parameter adjustments, appearance modification, low-volume trial runs supported.
+            </p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Button asChild variant="cta" size="lg" className="text-base font-semibold">
+                <Link href="/contact">Talk to Our Engineer</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-base font-semibold">
+                <Link href="/documents/Catalog.pdf" target="_blank" rel="noopener noreferrer">Download Catalog</Link>
+              </Button>
+            </div>
+            <p className="mt-6 text-xs text-muted">
+              Low MOQ (100 pcs) · Prototype in 90 days · 21 R&amp;D Engineers · CE Certified
+            </p>
+          </div>
+
           {related.length > 0 && (
             <div className="mt-16">
               <div className="flex items-center gap-3">
@@ -337,8 +361,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 {related.map((p) => (
                   <Link key={p.slug} href={p.url} className="group block rounded-xl border border-border bg-neutral/50 p-4 transition-all hover:border-accent hover:shadow-lg">
                     {p.images?.[0] && (
-                      <div className="aspect-video overflow-hidden rounded-lg bg-white">
-                        <img src={p.images[0]} alt={p.title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                      <div className="relative aspect-video overflow-hidden rounded-lg bg-white">
+                        <Image src={p.images[0]} alt={p.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                       </div>
                     )}
                     <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-accent">{p.category}</p>
