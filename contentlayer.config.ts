@@ -34,6 +34,7 @@ export const Product = defineDocumentType(() => ({
     title: { type: "string", required: true },
     slug: { type: "string", required: true },
     category: { type: "string", required: true },
+    description: { type: "string", required: false },
     subcategory: { type: "string", required: false },
     model: { type: "string", required: false },
     images: { type: "list", of: { type: "string" }, required: false },
