@@ -4,7 +4,7 @@
  import { siteConfig } from "@/lib/site-config";
  
  export const metadata: Metadata = {
-   title: "Electric vs Hydraulic RV Leveling System | Henghong",
+   title: { absolute: "Electric vs Hydraulic RV Leveling System | Henghong" },
    description:
      "Compare electric and hydraulic RV leveling systems: load capacity, cost, maintenance, and best fit for travel trailers, fifth wheels, and motorhomes. Expert guide from Henghong.",
    alternates: {

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { CTASection } from "@/components/home/CTASection";
 import { GlobalMarket } from "@/components/home/GlobalMarket";
 import { HeroSection } from "@/components/home/HeroSection";
@@ -13,6 +13,16 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
+  title: {
+    absolute: "Henghong | RV Leveling Systems & Jacks OEM Factory",
+  },
+  description:
+    "We specialize in OEM/ODM RV leveling systems and electric jacks. Intertek audited manufacturer with 22+ years of export experience.",
+  openGraph: {
+    title: "Henghong | RV Leveling Systems & Jacks OEM Factory",
+    description:
+      "We specialize in OEM/ODM RV leveling systems and electric jacks. Intertek audited manufacturer with 22+ years of export experience.",
+  },
   alternates: {
     canonical: siteConfig.url,
   },

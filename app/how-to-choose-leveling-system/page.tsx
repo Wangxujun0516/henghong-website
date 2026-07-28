@@ -4,7 +4,7 @@
  import { siteConfig } from "@/lib/site-config";
  
  export const metadata: Metadata = {
-   title: "How to Choose an RV Leveling System | Henghong",
+   title: { absolute: "How to Choose an RV Leveling System | Henghong" },
    description:
      "Learn how to choose the right RV leveling system: weight considerations, electric vs hydraulic, installation complexity, and supplier evaluation. Expert guide for RV manufacturers.",
    alternates: {

@@ -34,9 +34,10 @@ export function WhyChooseUs() {
           <SectionReveal delay={0.15}>
             <div className="relative overflow-hidden rounded-lg shadow-lg" style={{ paddingBottom: "56.25%" }}>
               <iframe
-                src="https://www.youtube.com/embed/S_UWfbPEHdk"
+                src="https://www.youtube-nocookie.com/embed/S_UWfbPEHdk"
                 title="Inside Henghong: Leading RV Leveling Systems &amp; Electric Jacks Factory"
                 frameBorder="0"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen

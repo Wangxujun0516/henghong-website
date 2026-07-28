@@ -51,3 +51,7 @@ next-env.d.ts
 01_Raw_Materials
 
 # codex.agents
+
+# tool artifacts
+.qoder/
+.tmp-screenshots/

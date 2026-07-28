@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { UmamiAnalytics } from "@/components/analytics/UmamiAnalytics";
 import { FloatingQuoteCTA } from "@/components/layout/FloatingQuoteCTA";
 import { Footer } from "@/components/layout/Footer";
+import { MotionProvider } from "@/components/layout/MotionProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { siteConfig } from "@/lib/site-config";
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     default: "RV Leveling System OEM Manufacturer | Custom Design, Low MOQ, Fast Prototype",
     template: "%s | Henghong RV Leveling Systems",
   },
-  description: "OEM/ODM RV leveling systems and electric jacks since 2004. Intertek verified facility with 21 R&amp;D engineers. 90-day prototype, MOQ as low as 100 pcs, CE certified. Request a quote today.",
+  description: "OEM/ODM RV leveling systems and electric jacks since 2004. Intertek verified facility with 21 R&D engineers. 90-day prototype, MOQ as low as 100 pcs, CE certified. Request a quote today.",
   keywords: [
     "RV leveling system",
     "electric jack",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: siteConfig.name,
     title: "RV Leveling System OEM Manufacturer | Custom Design, Low MOQ",
-    description: "OEM/ODM RV leveling systems since 2004. 21 R&amp;D engineers, 90-day prototype, MOQ 100 pcs. Intertek verified, CE certified.",
+    description: "OEM/ODM RV leveling systems since 2004. 21 R&D engineers, 90-day prototype, MOQ 100 pcs. Intertek verified, CE certified.",
     images: [{ url: "/images/factory/factory-complex.jpg", width: 1200, height: 630 }],
   },
   twitter: {
@@ -70,11 +71,13 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <Navbar />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <FloatingQuoteCTA />
-        <WhatsAppFloat />
+        <MotionProvider>
+          <Navbar />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <FloatingQuoteCTA />
+          <WhatsAppFloat />
+        </MotionProvider>
         <UmamiAnalytics />
       </body>
     </html>

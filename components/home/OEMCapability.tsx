@@ -1,10 +1,10 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
-import { Palette, Cpu, FileText, GitBranch, CheckCircle2 } from "lucide-react";
+import { Palette, Cpu, FileText, GitBranch } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const capabilities = [

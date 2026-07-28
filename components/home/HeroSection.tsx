@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -60,6 +60,7 @@ export function HeroSection() {
             poster="/images/video-frames/section-stats.jpg"
             preload="metadata"
             disablePictureInPicture
+            aria-hidden="true"
             style={{ opacity: isVisible ? 0.8 : 0, transition: "opacity 1s ease-out" }}
           >
             <source src="/videos/henghong.mp4" type="video/mp4" />

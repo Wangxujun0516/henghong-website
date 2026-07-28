@@ -4,7 +4,7 @@
  import { siteConfig } from "@/lib/site-config";
  
  export const metadata: Metadata = {
-   title: "RV Leveling System OEM Manufacturer | Henghong",
+   title: { absolute: "RV Leveling System OEM Manufacturer | Henghong" },
    description:
      "Since 2004, Henghong has been the trusted OEM/ODM partner for global RV manufacturers. 39,000m² Intertek-verified facility, 21 R&D engineers, 50+ patents. Request a quote today.",
    alternates: {
