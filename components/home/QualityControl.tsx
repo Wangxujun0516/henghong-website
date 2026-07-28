@@ -52,7 +52,7 @@ export function QualityControl() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
               <Image src="/images/video-frames/section-quality.jpg" alt="Quality control testing" fill className="object-cover" />
             </div>
           </motion.div>
