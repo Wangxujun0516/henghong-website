@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 import type { ComponentProps } from "react";
 
@@ -124,15 +125,21 @@ const components = {
     </a>
   ),
 
-  // Images
-  img: ({ src, alt, ...props }: ComponentProps<"img">) => (
-    <img
-      src={src}
-      alt={alt || ""}
-      className="w-full h-auto rounded-lg my-6"
-      {...props}
-    />
-  ),
+  // Images — uses next/image for automatic WebP/AVIF, lazy loading, responsive srcset
+  img: ({ src, alt }: ComponentProps<"img">) => {
+    if (!src || typeof src !== "string") return null;
+    return (
+      <Image
+        src={src}
+        alt={alt || ""}
+        width={1200}
+        height={800}
+        style={{ width: "100%", height: "auto" }}
+        className="rounded-lg my-6"
+        sizes="(max-width: 768px) 100vw, 800px"
+      />
+    );
+  },
 
   // Strong and emphasis
   strong: ({ children, ...props }: ComponentProps<"strong">) => (
