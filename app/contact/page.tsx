@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 import { ContactForm } from "@/components/contact/ContactForm";
+import { CalendlySchedule } from "@/components/lead-magnet/CalendlySchedule";
 import { ChecklistDownload } from "@/components/lead-magnet/ChecklistDownload";
 import { siteConfig } from "@/lib/site-config";
 
@@ -110,6 +111,8 @@ export default function ContactPage() {
                 {siteConfig.contact.responseTime}
               </p>
             </div>
+
+            <CalendlySchedule />
 
             <div className="rounded-lg border border-border bg-white p-5">
               <h3 className="font-semibold text-primary">Trust Signals</h3>

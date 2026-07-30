@@ -4,6 +4,7 @@ import { useActionState, useEffect, useRef } from "react";
 import { useFormStatus } from "react-dom";
 
 import { submitContactForm, type ContactFormState } from "@/app/actions/contact";
+import { trackUmamiEvent } from "@/components/analytics/UmamiAnalytics";
 import { Button } from "@/components/ui/button";
 
 const initialState: ContactFormState = {
@@ -27,6 +28,7 @@ export function ContactForm() {
   useEffect(() => {
     if (state.success) {
       formRef.current?.reset();
+      trackUmamiEvent("form_submit", { type: "contact_form" });
     }
   }, [state.success]);
 

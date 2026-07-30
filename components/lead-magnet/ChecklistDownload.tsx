@@ -6,6 +6,7 @@ import {
   submitDownloadForm,
   type DownloadFormState,
 } from "@/app/actions/download-checklist";
+import { trackUmamiEvent } from "@/components/analytics/UmamiAnalytics";
 import { Button } from "@/components/ui/button";
 
 const initialState: DownloadFormState = {
@@ -36,6 +37,7 @@ export function ChecklistDownload() {
     if (state.success && state.message) {
       window.open(state.message, "_blank");
       formRef.current?.reset();
+      trackUmamiEvent("checklist_download", { source: "contact_page" });
     }
   }, [state.success, state.message]);
 

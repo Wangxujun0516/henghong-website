@@ -1,8 +1,9 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 import { useFormStatus } from "react-dom";
 import { subscribeNewsletter, type NewsletterState } from "@/app/actions/newsletter";
+import { trackUmamiEvent } from "@/components/analytics/UmamiAnalytics";
 
 const initialState: NewsletterState = {
   success: false,
@@ -24,6 +25,12 @@ function SubmitButton() {
 
 export function NewsletterSubscribe() {
   const [state, formAction] = useActionState(subscribeNewsletter, initialState);
+
+  useEffect(() => {
+    if (state.success) {
+      trackUmamiEvent("newsletter_subscribe", { source: "blog_sidebar" });
+    }
+  }, [state.success]);
 
   if (state.success) {
     return (

@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { MessageSquareQuote } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { trackUmamiEvent } from "@/components/analytics/UmamiAnalytics";
 
 export function FloatingQuoteCTA() {
   const pathname = usePathname();
@@ -22,6 +23,7 @@ export function FloatingQuoteCTA() {
     >
       <Link
         href="/contact#quote"
+        onClick={() => trackUmamiEvent("cta_click", { type: "floating_quote" })}
         className="inline-flex items-center gap-2 rounded-full bg-cta px-5 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-cta/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
       >
         <MessageSquareQuote className="h-4 w-4" />

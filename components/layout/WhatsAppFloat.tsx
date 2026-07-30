@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Phone, X } from "lucide-react";
+import { trackUmamiEvent } from "@/components/analytics/UmamiAnalytics";
 import { siteConfig } from "@/lib/site-config";
 
 export function WhatsAppFloat() {
@@ -21,6 +22,12 @@ export function WhatsAppFloat() {
                   href={`https://wa.me/${num.replace(/\D/g, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    trackUmamiEvent("whatsapp_click", {
+                      location: "floating_button",
+                      number_index: index,
+                    })
+                  }
                   className="block text-xs text-muted hover:text-primary"
                 >
                   WhatsApp: {num}
