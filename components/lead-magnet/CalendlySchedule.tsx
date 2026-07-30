@@ -13,7 +13,7 @@ export function CalendlySchedule() {
       </p>
       <Button asChild variant="cta" size="sm" className="mt-4 w-full">
         <a
-          href="https://calendly.com/henghong-rv/15min"
+          href="https://calendly.com/wangxujun0516/30min"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() =>
