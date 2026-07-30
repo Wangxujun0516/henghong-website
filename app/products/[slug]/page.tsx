@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+import { ChecklistCTA } from "@/components/lead-magnet/ChecklistCTA";
 import { ProductGallery } from "@/components/products/ProductGallery";
 import { MdxContent } from "@/components/mdx/MdxContent";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -350,6 +351,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
               Low MOQ (100 pcs) · Prototype in 90 days · 21 R&amp;D Engineers · CE Certified
             </p>
           </div>
+
+          <ChecklistCTA />
 
           {related.length > 0 && (
             <div className="mt-16">

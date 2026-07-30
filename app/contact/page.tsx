@@ -120,7 +120,7 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div className="rounded-lg border-2 border-accent/20 bg-accent/[0.03] p-5">
+            <div id="checklist" className="scroll-mt-20 rounded-lg border-2 border-accent/20 bg-accent/[0.03] p-5">
               <h3 className="font-semibold text-primary">
                 Free OEM Sourcing Checklist
               </h3>

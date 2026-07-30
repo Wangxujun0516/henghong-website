@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, Tag } from "lucide-react";
 import Link from "next/link";
 import { allBlogs } from "@/.contentlayer/generated";
 import BlogSidebar from "@/components/blog/BlogSidebar";
+import { ChecklistCTA } from "@/components/lead-magnet/ChecklistCTA";
 import { MdxContent } from "@/components/mdx/MdxContent";
 
 interface PageProps {
@@ -104,6 +105,8 @@ export default async function BlogPost({ params }: PageProps) {
                 </Link>
               </div>
             </div>
+
+            <ChecklistCTA />
           </article>
 
           <aside>
