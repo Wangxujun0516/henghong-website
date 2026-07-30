@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     title: "Henghong | RV Leveling Systems & Jacks OEM Factory",
     description:
       "We specialize in OEM/ODM RV leveling systems and electric jacks. Intertek audited manufacturer with 22+ years of export experience.",
+    images: [{ url: "/images/factory/factory-complex.jpg", width: 1200, height: 630 }],
   },
   alternates: {
     canonical: siteConfig.url,

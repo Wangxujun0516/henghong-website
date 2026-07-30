@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.henghongrv.com/honors",
   },
+  openGraph: {
+    title: "Honors & Certifications | Henghong",
+    description:
+      "Awards and certifications recognizing Henghong's innovation in intelligent leveling systems.",
+    images: [{ url: "/images/factory/factory-complex.jpg", width: 1200, height: 630 }],
+  },
 };
 
 export default function HonorsPage() {

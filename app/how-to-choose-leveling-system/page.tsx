@@ -11,10 +11,11 @@
      canonical: `${siteConfig.url}/how-to-choose-leveling-system`,
    },
    openGraph: {
-     title: "How to Choose an RV Leveling System | Henghong",
-     description:
-       "A practical guide for RV manufacturers on selecting the right leveling system based on vehicle type, weight, budget, and application requirements.",
-   },
+    title: "How to Choose an RV Leveling System | Henghong",
+    description:
+      "A practical guide for RV manufacturers on selecting the right leveling system based on vehicle type, weight, budget, and application requirements.",
+    images: [{ url: `${siteConfig.url}/images/factory/factory-complex.jpg`, width: 1200, height: 630 }],
+  },
  };
  
  export default function Page() {

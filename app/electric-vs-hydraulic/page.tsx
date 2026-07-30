@@ -11,10 +11,11 @@
      canonical: `${siteConfig.url}/electric-vs-hydraulic`,
    },
    openGraph: {
-     title: "Electric vs Hydraulic RV Leveling System | Henghong",
-     description:
-       "Compare electric and hydraulic RV leveling systems. Expert guide covering pros, cons, costs, and which RV types each system suits best.",
-   },
+    title: "Electric vs Hydraulic RV Leveling System | Henghong",
+    description:
+      "Compare electric and hydraulic RV leveling systems. Expert guide covering pros, cons, costs, and which RV types each system suits best.",
+    images: [{ url: `${siteConfig.url}/images/factory/factory-complex.jpg`, width: 1200, height: 630 }],
+  },
  };
  
  export default function Page() {

@@ -365,7 +365,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   <Link key={p.slug} href={p.url} className="group block rounded-xl border border-border bg-neutral/50 p-4 transition-all hover:border-accent hover:shadow-lg">
                     {p.images?.[0] && (
                       <div className="relative aspect-video overflow-hidden rounded-lg bg-white">
-                        <Image src={p.images[0]} alt={p.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+                        <Image src={p.images[0]} alt={`${p.title} - Henghong ${p.category}`} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                       </div>
                     )}
                     <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-accent">{p.category}</p>

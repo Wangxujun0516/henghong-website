@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.henghongrv.com/technical-resources",
   },
+  openGraph: {
+    title: "Technical Resources & Industry Guides | Henghong",
+    description:
+      "Technical specifications, installation guides, and industry insights for RV leveling systems and electric jacks.",
+    images: [{ url: "/images/factory/factory-complex.jpg", width: 1200, height: 630 }],
+  },
 };
 
 const guides = [

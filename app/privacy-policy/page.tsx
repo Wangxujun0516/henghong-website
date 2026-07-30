@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.henghongrv.com/privacy-policy",
   },
+  openGraph: {
+    title: "Privacy Policy | Henghong",
+    description:
+      "How Henghong collects, uses, and protects your information when you contact us or browse our website.",
+    images: [{ url: "/images/factory/factory-complex.jpg", width: 1200, height: 630 }],
+  },
 };
 
 export default function PrivacyPolicyPage() {

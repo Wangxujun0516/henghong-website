@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     title: "Henghong Blog - RV Leveling Systems & Electric Jacks Insights",
     description:
       "Engineering guides, buying guides, and industry insights from Henghong Intelligent Equipment.",
+    images: [{ url: "/images/factory/factory-complex.jpg", width: 1200, height: 630 }],
   },
 };
 

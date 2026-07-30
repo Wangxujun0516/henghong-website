@@ -11,10 +11,11 @@
      canonical: `${siteConfig.url}/oem-manufacturer`,
    },
    openGraph: {
-     title: "RV Leveling System OEM Manufacturer | Henghong",
-     description:
-       "Since 2004, Henghong has been the trusted OEM/ODM partner for global RV manufacturers. 39,000m² Intertek-verified facility, 21 R&D engineers, 50+ patents.",
-   },
+    title: "RV Leveling System OEM Manufacturer | Henghong",
+    description:
+      "Since 2004, Henghong has been the trusted OEM/ODM partner for global RV manufacturers. 39,000m² Intertek-verified facility, 21 R&D engineers, 50+ patents.",
+    images: [{ url: `${siteConfig.url}/images/factory/factory-complex.jpg`, width: 1200, height: 630 }],
+  },
  };
  
  export default function Page() {

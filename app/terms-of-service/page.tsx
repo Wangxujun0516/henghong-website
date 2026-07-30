@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -6,6 +6,12 @@ export const metadata: Metadata = {
     "Read Henghong's terms of service for B2B customers, OEMs, and distributors of RV leveling systems and electric jacks.",
   alternates: {
     canonical: "https://www.henghongrv.com/terms-of-service",
+  },
+  openGraph: {
+    title: "Terms of Service | Henghong",
+    description:
+      "Henghong's terms of service for B2B customers, OEMs, and distributors of RV leveling systems and electric jacks.",
+    images: [{ url: "/images/factory/factory-complex.jpg", width: 1200, height: 630 }],
   },
 };
 

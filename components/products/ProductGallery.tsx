@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 export function ProductGallery({ images, title }: { images: string[]; title: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeImage = images[activeIndex] ?? images[0];
+  const baseAlt = `${title} - Henghong RV Leveling System`;
 
   if (!activeImage) {
     return (
@@ -22,7 +23,7 @@ export function ProductGallery({ images, title }: { images: string[]; title: str
       <div className="relative aspect-square overflow-hidden rounded-lg border border-border bg-neutral">
         <Image
           src={activeImage}
-          alt={title}
+          alt={baseAlt}
           fill
           priority
           className="object-cover"
@@ -46,7 +47,7 @@ export function ProductGallery({ images, title }: { images: string[]; title: str
             >
               <Image
                 src={image}
-                alt={`${title} view ${index + 1}`}
+                alt={`${baseAlt} - view ${index + 1}`}
                 fill
                 className="object-cover"
                 sizes="100px"
