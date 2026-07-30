@@ -2,6 +2,7 @@ import { FileText, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { allBlogs } from "@/.contentlayer/generated";
+import { NewsletterSubscribe } from "@/components/blog/NewsletterSubscribe";
 
 export const metadata: Metadata = {
   title: "Blog - Industry Insights & Guides",
@@ -89,18 +90,7 @@ export default function BlogPage() {
                 </ul>
 
                 <div className="mt-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Newsletter</h3>
-                  <p className="text-sm text-gray-600 mb-4">Subscribe for the latest industry insights and product updates.</p>
-                  <div className="space-y-3">
-                    <input
-                      type="email"
-                      placeholder="Your email address"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                    />
-                    <button className="w-full px-4 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors">
-                      Subscribe
-                    </button>
-                  </div>
+                  <NewsletterSubscribe />
                 </div>
               </div>
             </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 import { ContactForm } from "@/components/contact/ContactForm";
+import { ChecklistDownload } from "@/components/lead-magnet/ChecklistDownload";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -117,6 +118,20 @@ export default function ContactPage() {
                   <li key={signal}>✓ {signal}</li>
                 ))}
               </ul>
+            </div>
+
+            <div className="rounded-lg border-2 border-accent/20 bg-accent/[0.03] p-5">
+              <h3 className="font-semibold text-primary">
+                Free OEM Sourcing Checklist
+              </h3>
+              <p className="mt-2 text-xs leading-relaxed text-muted">
+                A practical 6-step checklist covering capacity calculation,
+                certification verification, supplier qualification, and logistics
+                planning.
+              </p>
+              <div className="mt-4">
+                <ChecklistDownload />
+              </div>
             </div>
           </div>
 
